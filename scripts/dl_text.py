@@ -20,8 +20,10 @@ START_FOLDER_NUM = 3
 END_FOLDER_NUM = 83
 #TODO: can be later changed into pass in using flags
 # Login email
-USERNAME = '1011433458@qq.com'
+# TODO: change the username
+USERNAME = 'admin@admin.com
 # Login password
+# TODO: change the password
 PASSWORD = 'ymfe.org'
 # PREFIX = './texts/'
 
