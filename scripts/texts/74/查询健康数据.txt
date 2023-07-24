@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "身高": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "体重": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "胸围": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "臀围": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "小腿围": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "大腿围": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "$$ref": "#/components/schemas/GymerHealDataAddReq"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultGymerHealDataAddReq"
+}

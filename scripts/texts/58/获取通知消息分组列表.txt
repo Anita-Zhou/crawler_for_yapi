@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "default": "消息标题"
+          },
+          "content": {
+            "type": "string",
+            "default": "消息内容"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "用户头像"
+          },
+          "gymerId": {
+            "type": "string",
+            "default": "用户id"
+          },
+          "name": {
+            "type": "string",
+            "default": "用户名称"
+          },
+          "messageType": {
+            "type": "string",
+            "default": "消息类型(01:系统 02游戏, 03训练结果, 04点赞,05评论,06关注,07课堂通知,08计划通知, 09 举报文章成功/失败, 10举报用户成功/失败, 11动态举报后被下架)"
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "$$ref": "#/components/schemas/MsgGroupResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListMsgGroupResponse"
+}

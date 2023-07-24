@@ -1,0 +1,155 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "动作id"
+          },
+          "chineseName": {
+            "type": "string",
+            "default": "动作中文名称"
+          },
+          "name": {
+            "type": "string",
+            "default": "动作名称"
+          },
+          "intro": {
+            "type": "string",
+            "default": "简介"
+          },
+          "actionType": {
+            "type": "string",
+            "default": "动作类型(力量训练、减脂训练、拉伸训练)"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "description": {
+            "type": "string",
+            "default": "描述"
+          },
+          "rsrcId": {
+            "type": "string",
+            "default": "资源id"
+          },
+          "useMachine": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createBy": {
+            "type": "string",
+            "default": "创建人"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateBy": {
+            "type": "string",
+            "default": "修改人"
+          },
+          "bodyParts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "部位id"
+                },
+                "courseId": {
+                  "type": "string",
+                  "default": "部位id"
+                },
+                "pid": {
+                  "type": "string",
+                  "default": "部位父级id"
+                },
+                "name": {
+                  "type": "string",
+                  "default": "部位名称"
+                },
+                "actionId": {
+                  "type": "string",
+                  "default": "动作id"
+                },
+                "areaId": {
+                  "type": "string",
+                  "default": "身体区域id"
+                },
+                "tiredGradeId": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "$$ref": "#/components/schemas/BodyPartResponse"
+            }
+          },
+          "prodCategories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "imageId": {
+                  "type": "string"
+                },
+                "parentId": {
+                  "type": "string"
+                },
+                "seq": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "type": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "default": "配件",
+              "$$ref": "#/components/schemas/ProdCategory"
+            }
+          }
+        },
+        "$$ref": "#/components/schemas/ActionResResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListActionResResponse"
+}

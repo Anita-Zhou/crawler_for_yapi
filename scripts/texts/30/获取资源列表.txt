@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "资源id"
+          },
+          "name": {
+            "type": "string",
+            "default": "资源名称"
+          },
+          "description": {
+            "type": "string",
+            "default": "资源描述"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "$$ref": "#/components/schemas/GymeraResource"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListGymeraResource"
+}

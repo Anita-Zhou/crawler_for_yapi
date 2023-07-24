@@ -1,0 +1,104 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "被关注用户id"
+        },
+        "gymerId": {
+          "type": "string",
+          "default": "用户id"
+        },
+        "昵称": {
+          "type": "string",
+          "default": " "
+        },
+        "头像": {
+          "type": "string",
+          "default": " "
+        },
+        "个人介绍": {
+          "type": "string",
+          "default": " "
+        },
+        "状态(1,关注2,相互关注3,已关注4,回关)": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "屏蔽状态: 0: 双方都未屏蔽； 1: 我已屏蔽他；2: 他已屏蔽我； 3: 已互相屏蔽": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "关注数量": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "粉丝数量": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "获赞数量": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "运动时长": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "总消耗(卡路里)": {
+          "type": "integer",
+          "format": "int64",
+          "default": " "
+        },
+        "总做功": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "注册时间": {
+          "type": "string",
+          "format": "date-time",
+          "default": " "
+        },
+        "总力量": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "角色": {
+          "type": "string",
+          "default": " "
+        },
+        "教练个人照片": {
+          "type": "string",
+          "default": " "
+        }
+      },
+      "$$ref": "#/components/schemas/UserHomePageResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultUserHomePageResponse"
+}

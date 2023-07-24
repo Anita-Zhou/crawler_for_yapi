@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "动作id"
+          },
+          "name": {
+            "type": "string",
+            "default": "动作名称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面id"
+          },
+          "trainTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "上一次训练该动作的时间"
+          }
+        },
+        "$$ref": "#/components/schemas/RecentlyTrainActionResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListRecentlyTrainActionResponse"
+}

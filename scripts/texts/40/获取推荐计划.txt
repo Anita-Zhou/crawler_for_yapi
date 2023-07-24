@@ -1,0 +1,109 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "计划模板id"
+          },
+          "name": {
+            "type": "string",
+            "default": "计划名称"
+          },
+          "catalogId": {
+            "type": "string",
+            "default": "健身需求id"
+          },
+          "gradeId": {
+            "type": "string",
+            "default": "等级"
+          },
+          "createBy": {
+            "type": "string",
+            "default": "创建者"
+          },
+          "updateBy": {
+            "type": "string",
+            "default": "修改人"
+          },
+          "videoId": {
+            "type": "string",
+            "default": "介绍视频"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "useMachine": {
+            "type": "boolean",
+            "default": false
+          },
+          "bgm": {
+            "type": "string",
+            "default": "背景音乐id"
+          },
+          "courseNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "groups": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dayNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "default": "标题"
+          },
+          "description": {
+            "type": "string",
+            "default": "描述"
+          },
+          "rsrcId": {
+            "type": "string",
+            "default": "资源id"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "businessType": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "$$ref": "#/components/schemas/PlanTemp"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListPlanTemp"
+}

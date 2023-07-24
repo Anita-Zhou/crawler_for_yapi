@@ -1,0 +1,275 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "评论数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "评论信息": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "评论id": {
+                "type": "string"
+              },
+              "文章id": {
+                "type": "string"
+              },
+              "父级id": {
+                "type": "string"
+              },
+              "用户id": {
+                "type": "string"
+              },
+              "内容": {
+                "type": "string"
+              },
+              "用户标识(1.用户2.作者)": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "是否点赞了评论(0.我未点赞; 1.我已点赞)": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "评论点赞数量": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "用户信息": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "default": "健客id"
+                  },
+                  "gymerName": {
+                    "type": "string",
+                    "default": "健客名"
+                  },
+                  "nickName": {
+                    "type": "string",
+                    "default": "昵称"
+                  },
+                  "avatarId": {
+                    "type": "string",
+                    "default": "头像"
+                  },
+                  "birthdate": {
+                    "type": "string",
+                    "default": "出生日期"
+                  },
+                  "contactMobile": {
+                    "type": "string",
+                    "default": "联系手机号"
+                  },
+                  "contactEmail": {
+                    "type": "string",
+                    "default": "联系邮箱"
+                  },
+                  "realName": {
+                    "type": "string",
+                    "default": "真实姓名"
+                  },
+                  "website": {
+                    "type": "string",
+                    "default": "个人网站"
+                  },
+                  "introduce": {
+                    "type": "string",
+                    "default": "个人介绍"
+                  },
+                  "status": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "addCountry": {
+                    "type": "string",
+                    "default": "国家和地区代码"
+                  },
+                  "addProvince": {
+                    "type": "string",
+                    "default": "居住省份代码"
+                  },
+                  "addCity": {
+                    "type": "string",
+                    "default": "居住城市代码"
+                  },
+                  "addDistrict": {
+                    "type": "string",
+                    "default": "居住区"
+                  },
+                  "address": {
+                    "type": "string",
+                    "default": "居住地址"
+                  },
+                  "gender": {
+                    "type": "string",
+                    "default": "性别国标编码"
+                  },
+                  "lang": {
+                    "type": "string",
+                    "default": "用户语言"
+                  },
+                  "statement": {
+                    "type": "string",
+                    "default": "个人宣言"
+                  },
+                  "createTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "gnameUpdateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "gnameUpdateCount": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                },
+                "default": "用户信息",
+                "$$ref": "#/components/schemas/Gymer"
+              },
+              "被回复的用户信息": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "default": "健客id"
+                  },
+                  "gymerName": {
+                    "type": "string",
+                    "default": "健客名"
+                  },
+                  "nickName": {
+                    "type": "string",
+                    "default": "昵称"
+                  },
+                  "avatarId": {
+                    "type": "string",
+                    "default": "头像"
+                  },
+                  "birthdate": {
+                    "type": "string",
+                    "default": "出生日期"
+                  },
+                  "contactMobile": {
+                    "type": "string",
+                    "default": "联系手机号"
+                  },
+                  "contactEmail": {
+                    "type": "string",
+                    "default": "联系邮箱"
+                  },
+                  "realName": {
+                    "type": "string",
+                    "default": "真实姓名"
+                  },
+                  "website": {
+                    "type": "string",
+                    "default": "个人网站"
+                  },
+                  "introduce": {
+                    "type": "string",
+                    "default": "个人介绍"
+                  },
+                  "status": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "addCountry": {
+                    "type": "string",
+                    "default": "国家和地区代码"
+                  },
+                  "addProvince": {
+                    "type": "string",
+                    "default": "居住省份代码"
+                  },
+                  "addCity": {
+                    "type": "string",
+                    "default": "居住城市代码"
+                  },
+                  "addDistrict": {
+                    "type": "string",
+                    "default": "居住区"
+                  },
+                  "address": {
+                    "type": "string",
+                    "default": "居住地址"
+                  },
+                  "gender": {
+                    "type": "string",
+                    "default": "性别国标编码"
+                  },
+                  "lang": {
+                    "type": "string",
+                    "default": "用户语言"
+                  },
+                  "statement": {
+                    "type": "string",
+                    "default": "个人宣言"
+                  },
+                  "createTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "gnameUpdateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "gnameUpdateCount": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                },
+                "default": "用户信息",
+                "$$ref": "#/components/schemas/Gymer"
+              },
+              "创建时间": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "子级评论": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ArticleCommentResponse",
+                  "type": "string"
+                }
+              }
+            },
+            "$$ref": "#/components/schemas/ArticleCommentResponse"
+          }
+        }
+      },
+      "$$ref": "#/components/schemas/ArticleContentCommentResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultArticleContentCommentResponse"
+}

@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "gymerId": {
+          "type": "string",
+          "default": "用户id"
+        },
+        "name": {
+          "type": "string",
+          "default": "名称"
+        },
+        "highLevel": {
+          "type": "integer",
+          "format": "int32",
+          "default": "最高级别"
+        },
+        "avatarId": {
+          "type": "string",
+          "default": "头像"
+        },
+        "period": {
+          "type": "integer",
+          "format": "int32",
+          "default": "时期"
+        }
+      },
+      "$$ref": "#/components/schemas/CoachStudentDetail"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultCoachStudentDetail"
+}

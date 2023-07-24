@@ -1,0 +1,189 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "reservation": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "教练id"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "name": {
+                "type": "string",
+                "default": "教练名称"
+              },
+              "educationBackground": {
+                "type": "string",
+                "default": "学历"
+              },
+              "mobile": {
+                "type": "string",
+                "default": "手机号"
+              },
+              "province": {
+                "type": "string",
+                "default": "省"
+              },
+              "city": {
+                "type": "string",
+                "default": "市"
+              },
+              "district": {
+                "type": "string",
+                "default": "区"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "registerTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createBy": {
+                "type": "string",
+                "default": "创建人"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updateBy": {
+                "type": "string",
+                "default": "修改人"
+              },
+              "reservationStatus": {
+                "type": "string",
+                "default": "预约状态"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "封面"
+              },
+              "introduce": {
+                "type": "string",
+                "default": "描述"
+              },
+              "gymerName": {
+                "type": "string",
+                "default": "用户名称"
+              }
+            },
+            "$$ref": "#/components/schemas/CoachReservationResponse"
+          },
+          "default": "预约教练"
+        },
+        "reservationHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "教练id"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "name": {
+                "type": "string",
+                "default": "教练名称"
+              },
+              "educationBackground": {
+                "type": "string",
+                "default": "学历"
+              },
+              "mobile": {
+                "type": "string",
+                "default": "手机号"
+              },
+              "province": {
+                "type": "string",
+                "default": "省"
+              },
+              "city": {
+                "type": "string",
+                "default": "市"
+              },
+              "district": {
+                "type": "string",
+                "default": "区"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "registerTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createBy": {
+                "type": "string",
+                "default": "创建人"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updateBy": {
+                "type": "string",
+                "default": "修改人"
+              },
+              "reservationStatus": {
+                "type": "string",
+                "default": "预约状态"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "封面"
+              },
+              "introduce": {
+                "type": "string",
+                "default": "描述"
+              },
+              "gymerName": {
+                "type": "string",
+                "default": "用户名称"
+              }
+            },
+            "$$ref": "#/components/schemas/CoachReservationResponse"
+          }
+        }
+      },
+      "$$ref": "#/components/schemas/MyCoachResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultMyCoachResponse"
+}

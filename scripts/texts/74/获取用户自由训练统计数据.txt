@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string",
+            "default": "开始时间"
+          },
+          "endTime": {
+            "type": "string",
+            "default": "结束时间"
+          },
+          "maxPull": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "$$ref": "#/components/schemas/FreedomTrainDataResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListFreedomTrainDataResponse"
+}

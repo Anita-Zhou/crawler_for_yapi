@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "广告id"
+          },
+          "link": {
+            "type": "string",
+            "default": "链接"
+          },
+          "advertisingImages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "键id"
+                },
+                "advertId": {
+                  "type": "string",
+                  "default": "广告id"
+                },
+                "pixelId": {
+                  "type": "string",
+                  "default": "pixelId"
+                },
+                "imageId": {
+                  "type": "string",
+                  "default": "imageId"
+                },
+                "rsrcId": {
+                  "type": "string",
+                  "default": "资源id"
+                }
+              },
+              "default": "图片集合",
+              "$$ref": "#/components/schemas/AdvertisingImage"
+            },
+            "default": "图片集合"
+          },
+          "externalLink": {
+            "type": "boolean",
+            "default": "是否有外部链接"
+          }
+        },
+        "$$ref": "#/components/schemas/AdvertResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListAdvertResponse"
+}

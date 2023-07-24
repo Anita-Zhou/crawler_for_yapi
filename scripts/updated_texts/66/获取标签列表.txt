@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "标签id"
+          },
+          "name": {
+            "type": "string",
+            "default": "标签名称"
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "标签值id"
+                },
+                "label": {
+                  "type": "string",
+                  "default": "标签值"
+                }
+              },
+              "default": "标签值列表",
+              "$$ref": "#/components/schemas/TagLabelResponse"
+            },
+            "default": "标签值列表"
+          }
+        },
+        "$$ref": "#/components/schemas/TagResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListTagResponse"
+}

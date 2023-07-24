@@ -1,0 +1,141 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "用户文章id"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "content": {
+                "type": "string",
+                "default": "内容"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "type": {
+                "type": "string",
+                "default": "类型(01:纯文字 02:文字图片 03:文字视频 04:文字图片视频)"
+              },
+              "upNumber": {
+                "type": "string",
+                "default": "点赞数量"
+              },
+              "gymerName": {
+                "type": "string",
+                "default": "用户名"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "头像"
+              },
+              "fileId": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "default": "图片"
+                },
+                "default": "图片"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "top": {
+                "type": "boolean"
+              },
+              "handpick": {
+                "type": "boolean"
+              }
+            },
+            "$$ref": "#/components/schemas/GymerArticleResponse"
+          }
+        },
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "orders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "column": {
+                "type": "string"
+              },
+              "asc": {
+                "type": "boolean"
+              }
+            },
+            "$$ref": "#/components/schemas/OrderItem"
+          }
+        },
+        "optimizeCountSql": {
+          "type": "boolean"
+        },
+        "hitCount": {
+          "type": "boolean"
+        },
+        "desc": {
+          "type" : "ref",
+          "$ref": "#/components/schemas/PageGymerArticleResponse"
+        },
+        "searchCount": {
+          "type": "boolean"
+        },
+        "asc": {
+          "type" : "ref",
+          "$ref": "#/components/schemas/PageGymerArticleResponse"
+        },
+        "ascs": {
+          "type" : "ref",
+          "$ref": "#/components/schemas/PageGymerArticleResponse"
+        },
+        "descs": {
+          "type" : "ref",
+          "$ref": "#/components/schemas/PageGymerArticleResponse"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "$$ref": "#/components/schemas/PageGymerArticleResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultPageGymerArticleResponse"
+}

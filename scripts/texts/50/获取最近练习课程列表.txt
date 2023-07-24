@@ -1,0 +1,130 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "课程id"
+          },
+          "name": {
+            "type": "string",
+            "default": "课程名称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "grade": {
+            "type": "string",
+            "default": "难度"
+          },
+          "participationPeopleNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gymeraAvatarIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "default": "用户头像集合"
+            },
+            "default": "用户头像集合"
+          },
+          "trainTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "useMachine": {
+            "type": "boolean",
+            "default": false
+          },
+          "totalDuration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prodCategories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "imageId": {
+                  "type": "string"
+                },
+                "parentId": {
+                  "type": "string"
+                },
+                "seq": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "type": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "default": "配件",
+              "$$ref": "#/components/schemas/ProdCategory"
+            },
+            "default": "配件"
+          },
+          "bodyParts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "部位id"
+                },
+                "pid": {
+                  "type": "string",
+                  "default": "父级部位id(0为顶级)"
+                },
+                "name": {
+                  "type": "string",
+                  "default": "部位名称"
+                },
+                "rsrcId": {
+                  "type": "string",
+                  "default": "资源id"
+                }
+              },
+              "default": "部位",
+              "$$ref": "#/components/schemas/BodyPart"
+            },
+            "default": "部位"
+          }
+        },
+        "$$ref": "#/components/schemas/RecentlyTrainCoursesResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListRecentlyTrainCoursesResponse"
+}

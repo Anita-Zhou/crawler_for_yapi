@@ -1,0 +1,234 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "gymer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "健客id"
+            },
+            "gymerName": {
+              "type": "string",
+              "default": "健客名"
+            },
+            "nickName": {
+              "type": "string",
+              "default": "昵称"
+            },
+            "avatarId": {
+              "type": "string",
+              "default": "头像"
+            },
+            "birthdate": {
+              "type": "string",
+              "default": "出生日期"
+            },
+            "contactMobile": {
+              "type": "string",
+              "default": "联系手机号"
+            },
+            "contactEmail": {
+              "type": "string",
+              "default": "联系邮箱"
+            },
+            "realName": {
+              "type": "string",
+              "default": "真实姓名"
+            },
+            "website": {
+              "type": "string",
+              "default": "个人网站"
+            },
+            "introduce": {
+              "type": "string",
+              "default": "个人介绍"
+            },
+            "status": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "addCountry": {
+              "type": "string",
+              "default": "国家和地区代码"
+            },
+            "addProvince": {
+              "type": "string",
+              "default": "居住省份代码"
+            },
+            "addCity": {
+              "type": "string",
+              "default": "居住城市代码"
+            },
+            "addDistrict": {
+              "type": "string",
+              "default": "居住区"
+            },
+            "address": {
+              "type": "string",
+              "default": "居住地址"
+            },
+            "gender": {
+              "type": "string",
+              "default": "性别国标编码"
+            },
+            "lang": {
+              "type": "string",
+              "default": "用户语言"
+            },
+            "statement": {
+              "type": "string",
+              "default": "个人宣言"
+            },
+            "createTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "gnameUpdateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "gnameUpdateCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "default": "用户信息",
+          "$$ref": "#/components/schemas/Gymer"
+        },
+        "roles": {
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "健客角色id"
+          },
+          "default": "健客角色id"
+        },
+        "weight": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deviceId": {
+          "type": "string",
+          "default": "设备Id"
+        },
+        "favorites": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "用戶id": {
+                "type": "string"
+              },
+              "栏目id": {
+                "type": "string"
+              },
+              "创建时间": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "default": "爱好",
+            "$$ref": "#/components/schemas/Favorite"
+          },
+          "default": "爱好"
+        },
+        "gymerDeviceLogData": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "logId": {
+                "type": "string"
+              },
+              "dataKey": {
+                "type": "string"
+              },
+              "dataValue": {
+                "type": "string"
+              }
+            },
+            "default": "用户配置日志信息",
+            "$$ref": "#/components/schemas/GymerDeviceLogData"
+          },
+          "default": "用户配置日志信息"
+        },
+        "injuryHistories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "gymerId": {
+                "type": "string",
+                "default": "健客id"
+              },
+              "bodyAreaId": {
+                "type": "string",
+                "default": "区域id"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "default": "伤病历史",
+            "$$ref": "#/components/schemas/GymerInjuryHistory"
+          },
+          "default": "伤病历史"
+        },
+        "grade": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "gymerConfigs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "gymerId": {
+                "type": "string"
+              },
+              "configKey": {
+                "type": "string"
+              },
+              "configValue": {
+                "type": "string"
+              }
+            },
+            "default": "用户配置信息",
+            "$$ref": "#/components/schemas/GymerConfig"
+          },
+          "default": "用户配置信息"
+        }
+      },
+      "$$ref": "#/components/schemas/GymerDetails"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultGymerDetails"
+}

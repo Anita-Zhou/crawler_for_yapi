@@ -1,0 +1,85 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "课堂id"
+          },
+          "name": {
+            "type": "string",
+            "default": "课堂名称"
+          },
+          "description": {
+            "type": "string",
+            "default": "描述"
+          },
+          "coachId": {
+            "type": "string",
+            "default": "教练id"
+          },
+          "coachName": {
+            "type": "string",
+            "default": "教练名称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "coachAvatarId": {
+            "type": "string",
+            "default": "教练头像"
+          },
+          "classRoomUser": {
+            "type": "string",
+            "default": "用户id"
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32",
+            "default": " "
+          },
+          "reserveTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": " "
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "default": "状态"
+          },
+          "appointmentNum": {
+            "type": "integer",
+            "format": "int32",
+            "default": " "
+          },
+          "isOpenVideo": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "$$ref": "#/components/schemas/AppointClassRoomResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListAppointClassRoomResponse"
+}

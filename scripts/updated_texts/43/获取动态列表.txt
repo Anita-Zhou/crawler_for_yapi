@@ -1,0 +1,157 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "用户文章id"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "content": {
+                "type": "string",
+                "default": "内容"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32",
+                "default": "状态"
+              },
+              "type": {
+                "type": "string",
+                "default": "类型(01:纯文字 02:文字图片 03:文字视频 04:文字图片视频)"
+              },
+              "upNumber": {
+                "type": "string",
+                "default": "点赞数量"
+              },
+              "gymerName": {
+                "type": "string",
+                "default": "用户名"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "头像"
+              },
+              "fileId": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "default": "图片"
+                },
+                "default": "图片"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "创建时间"
+              },
+              "top": {
+                "type": "boolean",
+                "default": "最常访问"
+              },
+              "handpick": {
+                "type": "boolean"
+              }
+            },
+            "$$ref": "#/components/schemas/GymerArticleResponse"
+          }
+        },
+        "total": {
+          "type": "integer",
+          "format": "int64",
+          "default": "身高"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "default": "每页显示条数，默认 10"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64",
+          "default": "当前页"
+        },
+        "orders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "column": {
+                "type": "string",
+                "default": "新建默认值"
+              },
+              "asc": {
+                "type": "boolean",
+                "default": "新建默认值"
+              }
+            },
+            "$$ref": "#/components/schemas/OrderItem"
+          }
+        },
+        "optimizeCountSql": {
+          "type": "boolean",
+          "default": "新建默认值"
+        },
+        "hitCount": {
+          "type": "boolean",
+          "default": "点击量"
+        },
+        "desc": {
+          "type": "ref",
+          "$ref": "#/components/schemas/PageGymerArticleResponse",
+          "default": "新建默认值"
+        },
+        "searchCount": {
+          "type": "boolean",
+          "default": "搜索量"
+        },
+        "asc": {
+          "type": "ref",
+          "$ref": "#/components/schemas/PageGymerArticleResponse",
+          "default": "新建默认值"
+        },
+        "ascs": {
+          "type": "ref",
+          "$ref": "#/components/schemas/PageGymerArticleResponse",
+          "default": "新建默认值"
+        },
+        "descs": {
+          "type": "ref",
+          "$ref": "#/components/schemas/PageGymerArticleResponse",
+          "default": "新建默认值"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64",
+          "default": "页面数"
+        }
+      },
+      "$$ref": "#/components/schemas/PageGymerArticleResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultPageGymerArticleResponse"
+}

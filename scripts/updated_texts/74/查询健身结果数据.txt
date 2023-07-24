@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "sumTimes": {
+          "type": "integer",
+          "format": "int32",
+          "default": "总次数"
+        },
+        "sumForce": {
+          "type": "integer",
+          "format": "int32",
+          "default": "总力量"
+        },
+        "trainTime": {
+          "type": "integer",
+          "format": "int32",
+          "default": "训练时间"
+        },
+        "trainCalorie": {
+          "type": "integer",
+          "format": "int32",
+          "default": "训练卡路里"
+        },
+        "useMachine": {
+          "type": "integer",
+          "format": "int32",
+          "default": "是否使用机器"
+        }
+      },
+      "$$ref": "#/components/schemas/TrainEndDataResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultTrainEndDataResponse"
+}

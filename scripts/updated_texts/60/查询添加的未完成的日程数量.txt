@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "course": {
+          "type": "integer",
+          "format": "int32",
+          "default": "课程数"
+        },
+        "plan": {
+          "type": "integer",
+          "format": "int32",
+          "default": "计划数"
+        }
+      },
+      "$$ref": "#/components/schemas/ScheduleCountResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultScheduleCountResponse"
+}

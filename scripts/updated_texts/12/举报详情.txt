@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "举报记录id"
+        },
+        "gymerId": {
+          "type": "string",
+          "default": "举报人的id"
+        },
+        "businessId": {
+          "type": "string",
+          "default": "被举报的业务id"
+        },
+        "businessType": {
+          "type": "string",
+          "default": "被举报的业务类型"
+        },
+        "type": {
+          "type": "string",
+          "default": "举报的类型"
+        },
+        "reason": {
+          "type": "string",
+          "default": "被举报的原因或理由"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "创建时间"
+        },
+        "auditStatus": {
+          "type": "integer",
+          "format": "int32",
+          "default": "审核状态"
+        },
+        "auditTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "审核时间"
+        },
+        "auditBy": {
+          "type": "string",
+          "default": "审核人"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "举报图片"
+          },
+          "default": "举报图片"
+        },
+        "content": {
+          "type": "string",
+          "default": "文章内容"
+        }
+      },
+      "$$ref": "#/components/schemas/AccusationResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultAccusationResponse"
+}

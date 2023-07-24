@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "actionId": {
+            "type": "string",
+            "default": "动作id"
+          },
+          "actionName": {
+            "type": "string",
+            "default": "动作名称"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "主键id"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "健客id"
+              },
+              "metricId": {
+                "type": "string",
+                "default": "值名称"
+              },
+              "metricValue": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "businessId": {
+                "type": "string",
+                "default": "业务id"
+              },
+              "businessType": {
+                "type": "string",
+                "default": "业务类型"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "$$ref": "#/components/schemas/GymerFitnessData"
+          }
+        },
+        "$$ref": "#/components/schemas/ForceMeasurementData"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListForceMeasurementData"
+}

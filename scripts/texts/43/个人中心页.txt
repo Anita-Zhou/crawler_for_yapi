@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "用户id": {
+          "type": "string"
+        },
+        "昵称": {
+          "type": "string"
+        },
+        "头像": {
+          "type": "string"
+        },
+        "个人介绍": {
+          "type": "string"
+        },
+        "关注数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "粉丝数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "获赞数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "运动时长": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "我的动态数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "屏蔽状态: 0: 双方都未屏蔽； 1: 我已屏蔽他；2: 他已屏蔽我； 3: 已互相屏蔽": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "关注状态: 0: 双方都未关注； 1: 我已关注他；2: 他已关注我； 3: 已互相关注": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "角色 1.教练2.教练审核中3.用户": {
+          "type": "string"
+        },
+        "self": {
+          "type": "boolean"
+        }
+      },
+      "$$ref": "#/components/schemas/MyHomePageResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultMyHomePageResponse"
+}

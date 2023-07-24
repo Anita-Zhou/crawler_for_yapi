@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "gymerId": {
+          "type": "string",
+          "default": "用户id"
+        },
+        "avatarId": {
+          "type": "string",
+          "default": "头像"
+        },
+        "gymerName": {
+          "type": "string",
+          "default": "用户名称"
+        },
+        "signNum": {
+          "type": "string",
+          "default": "打卡次数"
+        },
+        "date": {
+          "type": "string",
+          "default": "训练时长"
+        },
+        "rank": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "$$ref": "#/components/schemas/SignLeaderboardResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultSignLeaderboardResponse"
+}

@@ -1,0 +1,94 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "广告id"
+              },
+              "link": {
+                "type": "string",
+                "default": "链接"
+              },
+              "advertisingImages": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "advertId": {
+                      "type": "string"
+                    },
+                    "pixelId": {
+                      "type": "string"
+                    },
+                    "imageId": {
+                      "type": "string"
+                    },
+                    "rsrcId": {
+                      "type": "string"
+                    }
+                  },
+                  "default": "图片集合",
+                  "$$ref": "#/components/schemas/AdvertisingImage"
+                },
+                "default": "图片集合"
+              },
+              "externalLink": {
+                "type": "boolean"
+              }
+            },
+            "$$ref": "#/components/schemas/AdvertResponse"
+          }
+        },
+        "searchCount": {
+          "type": "boolean"
+        },
+        "hitCount": {
+          "type": "boolean"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "$$ref": "#/components/schemas/IPageAdvertResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPageAdvertResponse"
+}

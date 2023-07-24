@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "force": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "aerobicCalorie": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "anaerobicCalorie": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "anaerobicTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "aerobicTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "$$ref": "#/components/schemas/StatisticDataResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListStatisticDataResponse"
+}

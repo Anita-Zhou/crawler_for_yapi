@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "登录时间": {
+                "type": "string"
+              },
+              "用户名": {
+                "type": "string"
+              },
+              "状态 -2：逻辑删除 -1:锁定 0:禁用 1:启用": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "头像id": {
+                "type": "string"
+              },
+              "创建时间": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "修改时间": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "$$ref": "#/components/schemas/QueryAdminUserResponse"
+          }
+        },
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "orders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "column": {
+                "type": "string"
+              },
+              "asc": {
+                "type": "boolean"
+              }
+            },
+            "$$ref": "#/components/schemas/OrderItem"
+          }
+        },
+        "optimizeCountSql": {
+          "type": "boolean"
+        },
+        "hitCount": {
+          "type": "boolean"
+        },
+        "desc": {
+          "type": "boolean",
+          "$ref": "#/components/schemas/PageQueryAdminUserResponse"
+        },
+        "searchCount": {
+          "type": "boolean"
+        },
+        "asc": {
+          "type": "boolean",
+          "$ref": "#/components/schemas/PageQueryAdminUserResponse"
+        },
+        "ascs": {
+          "type": "boolean",
+          "$ref": "#/components/schemas/PageQueryAdminUserResponse"
+        },
+        "descs": {
+          "type": "boolean",
+          "$ref": "#/components/schemas/PageQueryAdminUserResponse"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "$$ref": "#/components/schemas/PageQueryAdminUserResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultPageQueryAdminUserResponse"
+}

@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "default": "名称"
+          },
+          "id": {
+            "type": "string",
+            "default": "键id"
+          }
+        },
+        "$$ref": "#/components/schemas/GameFactory"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListGameFactory"
+}

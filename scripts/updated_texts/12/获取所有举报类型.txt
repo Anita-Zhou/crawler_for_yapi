@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "键id"
+          },
+          "name": {
+            "type": "string",
+            "default": "名称"
+          },
+          "rsrcId": {
+            "type": "string",
+            "default": "资源id"
+          }
+        },
+        "$$ref": "#/components/schemas/AccusationType"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListAccusationType"
+}

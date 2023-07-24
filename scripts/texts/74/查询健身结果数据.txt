@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "sumTimes": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sumForce": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "trainTime": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "trainCalorie": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "useMachine": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "$$ref": "#/components/schemas/TrainEndDataResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultTrainEndDataResponse"
+}

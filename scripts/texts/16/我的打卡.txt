@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "gymerId": {
+          "type": "string",
+          "default": "用户id"
+        },
+        "recentSignTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "consecutiveNum": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalSign": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalPersonNum": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "avatarId": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "头像"
+          },
+          "default": "头像"
+        }
+      },
+      "$$ref": "#/components/schemas/FitnessSignResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultFitnessSignResponse"
+}

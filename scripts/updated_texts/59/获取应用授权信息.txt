@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "type": "string",
+          "default": "应用id"
+        },
+        "secret": {
+          "type": "string",
+          "default": "秘钥"
+        },
+        "signature": {
+          "type": "string",
+          "default": "签名"
+        }
+      },
+      "$$ref": "#/components/schemas/ThirdAppAuthInfo"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultThirdAppAuthInfo"
+}

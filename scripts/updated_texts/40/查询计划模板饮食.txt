@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "diet": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "计划饮食id"
+              },
+              "planTempId": {
+                "type": "string",
+                "default": "计划模板id"
+              },
+              "diet": {
+                "type": "string",
+                "default": "饮食文本"
+              },
+              "locale": {
+                "type": "string",
+                "default": "语言"
+              }
+            },
+            "$$ref": "#/components/schemas/PlanTempDiet"
+          },
+          "foods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tempDietId": {
+                  "type": "string",
+                  "default": "计划模板饮食id"
+                },
+                "foodId": {
+                  "type": "string",
+                  "default": "食物id"
+                },
+                "calorie": {
+                  "type": "integer",
+                  "format": "int64",
+                  "default": "训练卡路里"
+                },
+                "avatarId": {
+                  "type": "string",
+                  "default": "封面"
+                },
+                "name": {
+                  "type": "string",
+                  "default": "食物名称"
+                },
+                "seq": {
+                  "type": "integer",
+                  "format": "int32",
+                  "default": "第几次/排序"
+                }
+              },
+              "$$ref": "#/components/schemas/PlanTempDietFoodDetails"
+            }
+          }
+        },
+        "$$ref": "#/components/schemas/PlanTempDietDetails"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListPlanTempDietDetails"
+}

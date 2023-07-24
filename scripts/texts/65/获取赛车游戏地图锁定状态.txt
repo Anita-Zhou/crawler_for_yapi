@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "赛道": {
+            "type": "string"
+          },
+          "0: 已解锁  1: 未解锁": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "$$ref": "#/components/schemas/RacetrackStatusResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListRacetrackStatusResponse"
+}

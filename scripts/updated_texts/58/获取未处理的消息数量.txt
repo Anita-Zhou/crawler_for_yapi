@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "messageType": {
+          "type": "string",
+          "default": "消息类型"
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32",
+          "default": "数量"
+        },
+        "favor": {
+          "type": "integer",
+          "format": "int32",
+          "default": "点赞"
+        },
+        "comment": {
+          "type": "integer",
+          "format": "int32",
+          "default": "评论/回复内容"
+        },
+        "fans": {
+          "type": "integer",
+          "format": "int32",
+          "default": "新增粉丝"
+        },
+        "system": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "$$ref": "#/components/schemas/MessageCountResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultMessageCountResponse"
+}

@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "键id"
+          },
+          "name": {
+            "type": "string",
+            "default": "计划名称"
+          },
+          "planTempId": {
+            "type": "string",
+            "default": "计划模板id"
+          },
+          "catalogId": {
+            "type": "string",
+            "default": "健身需求id"
+          },
+          "gradeId": {
+            "type": "string",
+            "default": "等级"
+          },
+          "useMachine": {
+            "type": "boolean",
+            "default": false
+          },
+          "courseNum": {
+            "type": "integer",
+            "format": "int32",
+            "default": "参加课程数量"
+          },
+          "groups": {
+            "type": "integer",
+            "format": "int32",
+            "default": "组数"
+          },
+          "gymerId": {
+            "type": "string",
+            "default": "健客id"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "title": {
+            "type": "string",
+            "default": "标题"
+          },
+          "bgm": {
+            "type": "string",
+            "default": "背景音乐id"
+          },
+          "description": {
+            "type": "string",
+            "default": "描述"
+          },
+          "rsrcId": {
+            "type": "string",
+            "default": "资源id"
+          },
+          "delayDays": {
+            "type": "integer",
+            "format": "int32",
+            "default": "计划延迟时间"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "default": "状态"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "创建时间"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "更新时间"
+          },
+          "businessType": {
+            "type": "integer",
+            "format": "int32",
+            "default": "业务类型"
+          },
+          "coachId": {
+            "type": "string",
+            "default": "教练id"
+          }
+        },
+        "default": "计划信息",
+        "$$ref": "#/components/schemas/Plan"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListPlan"
+}

@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "关卡赛道": {
+            "type": "string",
+            "default": " "
+          },
+          "排名": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "用户": {
+                  "type": "string",
+                  "default": " "
+                },
+                "名字": {
+                  "type": "string",
+                  "default": " "
+                },
+                "头像": {
+                  "type": "string",
+                  "default": " "
+                },
+                "时长": {
+                  "type": "integer",
+                  "format": "int32",
+                  "default": " "
+                },
+                "排名": {
+                  "type": "integer",
+                  "format": "int32",
+                  "default": " "
+                }
+              },
+              "$$ref": "#/components/schemas/MultiplayerRacingRankDetail"
+            }
+          }
+        },
+        "$$ref": "#/components/schemas/MultiplayerRacingRank"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListMultiplayerRacingRank"
+}

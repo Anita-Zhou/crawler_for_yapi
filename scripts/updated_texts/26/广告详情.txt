@@ -1,0 +1,94 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "广告id"
+        },
+        "link": {
+          "type": "string",
+          "default": "链接"
+        },
+        "isExternalLink": {
+          "type": "integer",
+          "format": "int32",
+          "default": "是否外部链接"
+        },
+        "imageId": {
+          "type": "string",
+          "default": "图片id"
+        },
+        "seq": {
+          "type": "integer",
+          "format": "int32",
+          "default": "第几次/排序"
+        },
+        "showLocation": {
+          "type": "integer",
+          "format": "int32",
+          "default": "广告展示位置"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "创建时间"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pixelId": {
+                "type": "string",
+                "default": "像素id"
+              },
+              "imageId": {
+                "type": "string",
+                "default": "imageId"
+              },
+              "langImages": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "langId": {
+                      "type": "string",
+                      "default": "语言id"
+                    },
+                    "imageId": {
+                      "type": "string",
+                      "default": "imageId"
+                    }
+                  },
+                  "$$ref": "#/components/schemas/LangImageRequest"
+                }
+              }
+            },
+            "default": "广告图片",
+            "$$ref": "#/components/schemas/AdvertisingImageResponse"
+          },
+          "default": "广告图片"
+        }
+      },
+      "$$ref": "#/components/schemas/AdvertisingResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultAdvertisingResponse"
+}

@@ -1,0 +1,310 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "教练id"
+        },
+        "gymerId": {
+          "type": "string",
+          "default": "用户id"
+        },
+        "name": {
+          "type": "string",
+          "default": "教练名称"
+        },
+        "educationBackground": {
+          "type": "string",
+          "default": "学历"
+        },
+        "mobile": {
+          "type": "string",
+          "default": "手机号"
+        },
+        "province": {
+          "type": "string",
+          "default": "省"
+        },
+        "city": {
+          "type": "string",
+          "default": "市"
+        },
+        "district": {
+          "type": "string",
+          "default": "区"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32",
+          "default": "状态"
+        },
+        "coachCredentials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "键id"
+              },
+              "source": {
+                "type": "string",
+                "default": "资源"
+              },
+              "coachId": {
+                "type": "string"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32",
+                "default": "第几次/排序"
+              },
+              "coachCredentialFiles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "fileId": {
+                      "type": "string"
+                    },
+                    "credentialId": {
+                      "type": "string"
+                    }
+                  },
+                  "$$ref": "#/components/schemas/CoachCredentialFile"
+                }
+              }
+            },
+            "default": "教练资质",
+            "$$ref": "#/components/schemas/CoachCredentialResponse"
+          },
+          "default": "教练资质"
+        },
+        "coachExpertises": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "教练专长"
+          },
+          "default": "教练专长"
+        },
+        "personalPhotos": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "个人照片"
+          },
+          "default": "个人照片"
+        },
+        "vitae": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "简历"
+          },
+          "default": "简历"
+        },
+        "cardFront": {
+          "type": "string",
+          "default": "身份证正面照"
+        },
+        "cardBack": {
+          "type": "string",
+          "default": "身份证反面照"
+        },
+        "gymer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "健客id"
+            },
+            "gymerName": {
+              "type": "string",
+              "default": "健客名"
+            },
+            "nickName": {
+              "type": "string",
+              "default": "昵称"
+            },
+            "avatarId": {
+              "type": "string",
+              "default": "头像"
+            },
+            "birthdate": {
+              "type": "string",
+              "default": "出生日期"
+            },
+            "contactMobile": {
+              "type": "string",
+              "default": "联系手机号"
+            },
+            "contactEmail": {
+              "type": "string",
+              "default": "联系邮箱"
+            },
+            "realName": {
+              "type": "string",
+              "default": "真实姓名"
+            },
+            "website": {
+              "type": "string",
+              "default": "个人网站"
+            },
+            "introduce": {
+              "type": "string",
+              "default": "个人介绍"
+            },
+            "status": {
+              "type": "integer",
+              "format": "int32",
+              "default": "状态"
+            },
+            "addCountry": {
+              "type": "string",
+              "default": "国家和地区代码"
+            },
+            "addProvince": {
+              "type": "string",
+              "default": "居住省份代码"
+            },
+            "addCity": {
+              "type": "string",
+              "default": "居住城市代码"
+            },
+            "addDistrict": {
+              "type": "string",
+              "default": "居住区"
+            },
+            "address": {
+              "type": "string",
+              "default": "居住地址"
+            },
+            "gender": {
+              "type": "string",
+              "default": "性别国标编码"
+            },
+            "lang": {
+              "type": "string",
+              "default": "用户语言"
+            },
+            "statement": {
+              "type": "string",
+              "default": "个人宣言"
+            },
+            "createTime": {
+              "type": "string",
+              "format": "date-time",
+              "default": "创建时间"
+            },
+            "updateTime": {
+              "type": "string",
+              "format": "date-time",
+              "default": "更新时间"
+            },
+            "gnameUpdateTime": {
+              "type": "string",
+              "format": "date-time",
+              "default": "gname上次更改时间"
+            },
+            "gnameUpdateCount": {
+              "type": "integer",
+              "format": "int32",
+              "default": "gname总更改次数"
+            }
+          },
+          "default": "用户信息",
+          "$$ref": "#/components/schemas/Gymer"
+        },
+        "fitnessRequest": {
+          "type": "object",
+          "properties": {
+            "totalTime": {
+              "type": "integer",
+              "format": "int32",
+              "default": "总次数"
+            },
+            "aerobic": {
+              "type": "integer",
+              "format": "int32",
+              "default": "有氧"
+            },
+            "anaerobic": {
+              "type": "integer",
+              "format": "int32",
+              "default": "无氧"
+            },
+            "lossOverall": {
+              "type": "integer",
+              "format": "int32",
+              "default": "减重总数"
+            },
+            "totalCapacity": {
+              "type": "integer",
+              "format": "int32",
+              "default": "总消耗"
+            },
+            "weight": {
+              "type": "integer",
+              "format": "int32",
+              "default": "体重"
+            },
+            "height": {
+              "type": "integer",
+              "format": "int32",
+              "default": "身高"
+            }
+          },
+          "default": "运动数据",
+          "$$ref": "#/components/schemas/FitnessRequest"
+        },
+        "favorite": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "用戶id": {
+                "type": "string"
+              },
+              "栏目id": {
+                "type": "string"
+              },
+              "创建时间": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "default": "爱好",
+            "$$ref": "#/components/schemas/Favorite"
+          },
+          "default": "运动偏好"
+        },
+        "injuryHistory": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "$$ref": "#/components/schemas/CoachDetailsResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultCoachDetailsResponse"
+}

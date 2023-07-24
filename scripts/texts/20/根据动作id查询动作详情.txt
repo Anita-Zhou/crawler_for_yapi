@@ -1,0 +1,348 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "动作id"
+        },
+        "name": {
+          "type": "string",
+          "default": "动作名称"
+        },
+        "intro": {
+          "type": "string",
+          "default": "简介"
+        },
+        "avatarId": {
+          "type": "string",
+          "default": "封面id"
+        },
+        "description": {
+          "type": "string",
+          "default": "描述"
+        },
+        "likeAmount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "useNumber": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "bodyPart": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "部位id"
+            },
+            "pid": {
+              "type": "string",
+              "default": "父级部位id(0为顶级)"
+            },
+            "name": {
+              "type": "string",
+              "default": "部位名称"
+            },
+            "rsrcId": {
+              "type": "string",
+              "default": "资源id"
+            }
+          },
+          "default": "部位",
+          "$$ref": "#/components/schemas/BodyPart"
+        },
+        "bodyParts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "部位id"
+              },
+              "pid": {
+                "type": "string",
+                "default": "父级部位id(0为顶级)"
+              },
+              "name": {
+                "type": "string",
+                "default": "部位名称"
+              },
+              "rsrcId": {
+                "type": "string",
+                "default": "资源id"
+              }
+            },
+            "default": "部位",
+            "$$ref": "#/components/schemas/BodyPart"
+          },
+          "default": "部位"
+        },
+        "muscle": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "部位id"
+              },
+              "courseId": {
+                "type": "string",
+                "default": "部位id"
+              },
+              "pid": {
+                "type": "string",
+                "default": "部位父级id"
+              },
+              "name": {
+                "type": "string",
+                "default": "部位名称"
+              },
+              "actionId": {
+                "type": "string",
+                "default": "动作id"
+              },
+              "areaId": {
+                "type": "string",
+                "default": "身体区域id"
+              },
+              "tiredGradeId": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "$$ref": "#/components/schemas/BodyPartResponse"
+          },
+          "default": "肌肉"
+        },
+        "muscles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "部位id"
+              },
+              "courseId": {
+                "type": "string",
+                "default": "部位id"
+              },
+              "pid": {
+                "type": "string",
+                "default": "部位父级id"
+              },
+              "name": {
+                "type": "string",
+                "default": "部位名称"
+              },
+              "actionId": {
+                "type": "string",
+                "default": "动作id"
+              },
+              "areaId": {
+                "type": "string",
+                "default": "身体区域id"
+              },
+              "tiredGradeId": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "$$ref": "#/components/schemas/BodyPartResponse"
+          },
+          "default": "肌肉"
+        },
+        "isMachine": {
+          "type": "boolean",
+          "default": false
+        },
+        "batch": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "span": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "times": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "leftForce": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rightForce": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "leftAssist": {
+          "type": "boolean",
+          "default": false
+        },
+        "rightAssist": {
+          "type": "boolean",
+          "default": false
+        },
+        "leftForceMode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rightForceMode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "span": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "times": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "leftForce": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "rightForce": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "leftAssist": {
+                "type": "boolean",
+                "default": false
+              },
+              "rightAssist": {
+                "type": "boolean",
+                "default": false
+              },
+              "leftForceMode": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "rightForceMode": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "default": "训练数据集合",
+            "$$ref": "#/components/schemas/GroupItem"
+          },
+          "default": "训练数据集合"
+        },
+        "actionVideos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "动作视频id"
+              },
+              "actionId": {
+                "type": "string",
+                "default": "动作id"
+              },
+              "formatId": {
+                "type": "string",
+                "default": "视频格式(流畅、标清、高清...)"
+              },
+              "classifyId": {
+                "type": "string",
+                "default": "视频分类(标准视频、讲解视频)"
+              },
+              "modelId": {
+                "type": "string",
+                "default": "模特id"
+              },
+              "videoId": {
+                "type": "string",
+                "default": "视频id"
+              },
+              "viewId": {
+                "type": "string",
+                "default": "视角id"
+              },
+              "langId": {
+                "type": "string",
+                "default": "语言id"
+              },
+              "rsrcId": {
+                "type": "string",
+                "default": "资源id"
+              }
+            },
+            "default": "动作视频(包含中英文的, all)",
+            "$$ref": "#/components/schemas/ActionVideo"
+          },
+          "default": "动作视频集合"
+        },
+        "gradeId": {
+          "type": "string",
+          "default": "等级Id"
+        },
+        "accessories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "imageId": {
+                "type": "string"
+              },
+              "parentId": {
+                "type": "string"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "type": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "default": "配件",
+            "$$ref": "#/components/schemas/ProdCategory"
+          },
+          "default": "配件id"
+        }
+      },
+      "$$ref": "#/components/schemas/ActionDetailsV2Response"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultActionDetailsV2Response"
+}

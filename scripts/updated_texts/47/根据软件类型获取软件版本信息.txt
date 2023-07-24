@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "versionId": {
+          "type": "string",
+          "default": "版本id"
+        },
+        "type": {
+          "type": "string",
+          "default": "软件类型"
+        },
+        "forced": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "fileId": {
+          "type": "string",
+          "default": "文件id"
+        },
+        "fileSize": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "version": {
+          "type": "string",
+          "default": "版本号"
+        },
+        "contentId": {
+          "type": "string",
+          "default": "内容说明"
+        }
+      },
+      "$$ref": "#/components/schemas/SoftWareResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultSoftWareResponse"
+}

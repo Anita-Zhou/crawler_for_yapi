@@ -1,0 +1,269 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "plan": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "计划模板id"
+            },
+            "name": {
+              "type": "string",
+              "default": "计划名称"
+            },
+            "catalogId": {
+              "type": "string",
+              "default": "健身需求id"
+            },
+            "gradeId": {
+              "type": "string",
+              "default": "等级"
+            },
+            "createBy": {
+              "type": "string",
+              "default": "创建者"
+            },
+            "updateBy": {
+              "type": "string",
+              "default": "修改人"
+            },
+            "videoId": {
+              "type": "string",
+              "default": "介绍视频"
+            },
+            "avatarId": {
+              "type": "string",
+              "default": "封面"
+            },
+            "useMachine": {
+              "type": "boolean",
+              "default": false
+            },
+            "bgm": {
+              "type": "string",
+              "default": "背景音乐id"
+            },
+            "courseNum": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "groups": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "dayNum": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "title": {
+              "type": "string",
+              "default": "标题"
+            },
+            "description": {
+              "type": "string",
+              "default": "描述"
+            },
+            "rsrcId": {
+              "type": "string",
+              "default": "资源id"
+            },
+            "status": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "businessType": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "$$ref": "#/components/schemas/PlanTemp"
+        },
+        "diets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "计划饮食id"
+              },
+              "planTempId": {
+                "type": "string",
+                "default": "计划模板id"
+              },
+              "diet": {
+                "type": "string",
+                "default": "饮食文本"
+              },
+              "locale": {
+                "type": "string",
+                "default": "语言"
+              }
+            },
+            "$$ref": "#/components/schemas/PlanTempDiet"
+          }
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "group": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "default": "计划模板课时分组id"
+                  },
+                  "name": {
+                    "type": "string",
+                    "default": "分组名称"
+                  },
+                  "planTempId": {
+                    "type": "string",
+                    "default": "计划模板id"
+                  },
+                  "dayNum": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "description": {
+                    "type": "string",
+                    "default": "描述"
+                  },
+                  "seq": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "courseNum": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                },
+                "$$ref": "#/components/schemas/PlanTempGroup"
+              },
+              "actions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "计划模板动作id"
+                        },
+                        "planTempId": {
+                          "type": "string",
+                          "default": "计划模板id"
+                        },
+                        "actionId": {
+                          "type": "string",
+                          "default": "动作id"
+                        },
+                        "type": {
+                          "type": "string",
+                          "default": "类型 01-热身 02-标准 03-拉伸"
+                        },
+                        "power": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "times": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "batch": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "leftForce": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "rightForce": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "leftForceMode": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "rightForceMode": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      },
+                      "$$ref": "#/components/schemas/PlanTempActions"
+                    },
+                    "delta": {
+                      "type": "object",
+                      "properties": {
+                        "tempGroupId": {
+                          "type": "string",
+                          "default": "计划模板课时分组id"
+                        },
+                        "tempActionId": {
+                          "type": "string",
+                          "default": "计划模板动作id"
+                        },
+                        "timesDelta": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "powerDelta": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "span": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "seq": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      },
+                      "$$ref": "#/components/schemas/PlanTempDelta"
+                    }
+                  },
+                  "$$ref": "#/components/schemas/PlanTempActionsDetails"
+                }
+              }
+            },
+            "$$ref": "#/components/schemas/PlanTempGroupDetails"
+          }
+        }
+      },
+      "$$ref": "#/components/schemas/PlanTempDetails"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultPlanTempDetails"
+}

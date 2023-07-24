@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "游戏id"
+        },
+        "name": {
+          "type": "string",
+          "default": "游戏名称"
+        },
+        "avatarId": {
+          "type": "string",
+          "default": "游戏封面"
+        },
+        "rule": {
+          "type": "string",
+          "default": "规则"
+        },
+        "description": {
+          "type": "string",
+          "default": "描述"
+        }
+      },
+      "$$ref": "#/components/schemas/GameFactoryDetailResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultGameFactoryDetailResponse"
+}

@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "健身栏目id"
+          },
+          "name": {
+            "type": "string",
+            "default": "健身栏目名称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "description": {
+            "type": "string",
+            "default": "描述"
+          },
+          "pid": {
+            "type": "string",
+            "default": "父级栏目id(0为顶级)"
+          },
+          "bodyPartList": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "default": "部位集合"
+            },
+            "default": "部位集合"
+          }
+        },
+        "$$ref": "#/components/schemas/FitnessCatalogResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListFitnessCatalogResponse"
+}

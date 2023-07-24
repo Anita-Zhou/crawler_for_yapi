@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "人体区域id"
+          },
+          "name": {
+            "type": "string",
+            "default": "人体区域名称"
+          },
+          "bodyParts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "部位id"
+                },
+                "courseId": {
+                  "type": "string",
+                  "default": "部位id"
+                },
+                "pid": {
+                  "type": "string",
+                  "default": "部位父级id"
+                },
+                "name": {
+                  "type": "string",
+                  "default": "部位名称"
+                },
+                "actionId": {
+                  "type": "string",
+                  "default": "动作id"
+                },
+                "areaId": {
+                  "type": "string",
+                  "default": "身体区域id"
+                },
+                "tiredGradeId": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "$$ref": "#/components/schemas/BodyPartResponse"
+            },
+            "default": "人体区域名称"
+          }
+        },
+        "$$ref": "#/components/schemas/BodyAreaResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListBodyAreaResponse"
+}

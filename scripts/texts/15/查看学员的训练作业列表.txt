@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "教练id"
+              },
+              "courseId": {
+                "type": "string",
+                "default": "课程id"
+              },
+              "prodCategories": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "businessId": {
+                      "type": "string",
+                      "default": "课程id"
+                    },
+                    "id": {
+                      "type": "string",
+                      "default": "配件id"
+                    },
+                    "imageId": {
+                      "type": "string",
+                      "default": "配件图标"
+                    }
+                  },
+                  "default": "配件列表",
+                  "$$ref": "#/components/schemas/CourseProdCategoryResponse"
+                },
+                "default": "配件列表"
+              },
+              "name": {
+                "type": "string",
+                "default": "作业名称"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "totalDuration": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "gradeId": {
+                "type": "string",
+                "default": "课程等级"
+              },
+              "description": {
+                "type": "string",
+                "default": "计划描述/简介"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "封面"
+              },
+              "courseNum": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "trainNum": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "homeworkType": {
+                "type": "string",
+                "default": "作业类型"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "$$ref": "#/components/schemas/CoachHomeworkResponse"
+          }
+        },
+        "searchCount": {
+          "type": "boolean"
+        },
+        "hitCount": {
+          "type": "boolean"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "$$ref": "#/components/schemas/IPageCoachHomeworkResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPageCoachHomeworkResponse"
+}

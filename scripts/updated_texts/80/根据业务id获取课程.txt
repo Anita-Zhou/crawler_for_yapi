@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "number"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "additionalProp1": {
+          "type": "object",
+          "properties": {}
+        },
+        "additionalProp2": {
+          "type": "object",
+          "properties": {}
+        },
+        "additionalProp3": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "键id"
+          },
+          "name": {
+            "type": "string",
+            "default": "名称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": " "
+          },
+          "grade": {
+            "type": "string",
+            "default": "等级"
+          },
+          "prodCategory": {
+            "type": "string",
+            "default": " "
+          },
+          "participationPeopleNumber": {
+            "type": "number",
+            "default": "参与人数"
+          },
+          "gymeraAvatarIds": {
+            "type": "string",
+            "default": " "
+          },
+          "useMachine": {
+            "type": "boolean",
+            "default": "是否使用机器"
+          },
+          "bodyParts": {
+            "type": "string",
+            "default": "训练部位"
+          },
+          "totalDuration": {
+            "type": "string",
+            "default": "总持续时间"
+          }
+        }
+      }
+    }
+  }
+}

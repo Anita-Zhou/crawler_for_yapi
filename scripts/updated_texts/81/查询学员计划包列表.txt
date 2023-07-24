@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "主键id"
+          },
+          "pepdId": {
+            "type": "string",
+            "default": "1v1私教计划包明细id"
+          },
+          "planId": {
+            "type": "string",
+            "default": "计划id"
+          },
+          "gymerId": {
+            "type": "string",
+            "default": "用户id"
+          },
+          "nickName": {
+            "type": "string",
+            "default": "用户昵称"
+          },
+          "planName": {
+            "type": "string",
+            "default": "计划名称"
+          },
+          "period": {
+            "type": "integer",
+            "format": "int64",
+            "default": "周期"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "创建时间"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "更新时间"
+          },
+          "practicedDay": {
+            "type": "integer",
+            "format": "int32",
+            "default": "已使用训练时间"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "description": {
+            "type": "string",
+            "default": "描述"
+          },
+          "isCustom": {
+            "type": "integer",
+            "format": "int32",
+            "default": "是否定制"
+          }
+        },
+        "$$ref": "#/components/schemas/GymerPrivateEducationPlanResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListGymerPrivateEducationPlanResponse"
+}

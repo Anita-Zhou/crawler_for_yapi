@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "nickName": {
+                "type": "string",
+                "default": "用户昵称"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "头像"
+              },
+              "imageId": {
+                "type": "string",
+                "default": "内容封面"
+              },
+              "content": {
+                "type": "string",
+                "default": "文章内容"
+              },
+              "comment": {
+                "type": "string",
+                "default": "评论/回复内容"
+              },
+              "parentComment": {
+                "type": "string",
+                "default": "被评论/回复的内容"
+              },
+              "parentCommentGymer": {
+                "type": "string",
+                "default": "被评论/回复的用户名"
+              },
+              "commentId": {
+                "type": "string",
+                "default": "评论id"
+              },
+              "commentPid": {
+                "type": "string",
+                "default": "被评论/回复的评论id"
+              },
+              "articleId": {
+                "type": "string",
+                "default": "文章id"
+              },
+              "businessId": {
+                "type": "string",
+                "default": "业务id"
+              },
+              "author": {
+                "type": "string",
+                "default": "内容作者名字"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "attention": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "$$ref": "#/components/schemas/CommunityMsgResponse"
+          }
+        },
+        "searchCount": {
+          "type": "boolean"
+        },
+        "hitCount": {
+          "type": "boolean"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "$$ref": "#/components/schemas/IPageCommunityMsgResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPageCommunityMsgResponse"
+}

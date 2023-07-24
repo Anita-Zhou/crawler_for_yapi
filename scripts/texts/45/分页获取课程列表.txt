@@ -1,0 +1,106 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "课程id"
+          },
+          "name": {
+            "type": "string",
+            "default": "课程名称"
+          },
+          "intro": {
+            "type": "string",
+            "default": "简介"
+          },
+          "description": {
+            "type": "string",
+            "default": "描述"
+          },
+          "rsrcId": {
+            "type": "string",
+            "default": "资源id"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "totalDuration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useMachine": {
+            "type": "boolean",
+            "default": false
+          },
+          "gradeId": {
+            "type": "string",
+            "default": "等级id"
+          },
+          "videoId": {
+            "type": "string",
+            "default": "视频id"
+          },
+          "modelId": {
+            "type": "string",
+            "default": "模特id"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "aerobic": {
+            "type": "boolean",
+            "default": false
+          },
+          "useAi": {
+            "type": "boolean",
+            "default": false
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createBy": {
+            "type": "string",
+            "default": "创建人"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateBy": {
+            "type": "string",
+            "default": "修改人"
+          },
+          "businessType": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "default": "课程",
+        "$$ref": "#/components/schemas/Course"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListCourse"
+}

@@ -1,0 +1,139 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "planTrainTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "courseList": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "主键id"
+                },
+                "seq": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "courseId": {
+                  "type": "string",
+                  "default": "课程id"
+                },
+                "courseName": {
+                  "type": "string",
+                  "default": "课程名称"
+                },
+                "avatarId": {
+                  "type": "string",
+                  "default": "课程背景"
+                },
+                "totalDuration": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "gradeId": {
+                  "type": "string",
+                  "default": "课程等级"
+                },
+                "startTime": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "endTime": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "status": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "categoryList": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "default": "部位id"
+                      },
+                      "imageId": {
+                        "type": "string",
+                        "default": "配件图标"
+                      },
+                      "actionId": {
+                        "type": "string",
+                        "default": "动作id"
+                      }
+                    },
+                    "default": "器械列表",
+                    "$$ref": "#/components/schemas/ProdCategoryResponse"
+                  },
+                  "default": "器械列表"
+                },
+                "bodyParts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "default": "部位id"
+                      },
+                      "pid": {
+                        "type": "string",
+                        "default": "父级部位id(0为顶级)"
+                      },
+                      "name": {
+                        "type": "string",
+                        "default": "部位名称"
+                      },
+                      "rsrcId": {
+                        "type": "string",
+                        "default": "资源id"
+                      }
+                    },
+                    "default": "部位",
+                    "$$ref": "#/components/schemas/BodyPart"
+                  },
+                  "default": "部位"
+                },
+                "end": {
+                  "type": "boolean"
+                }
+              },
+              "$$ref": "#/components/schemas/PlanTrainDayCourseDetail"
+            }
+          }
+        },
+        "$$ref": "#/components/schemas/PlantTrainDayDetail"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListPlantTrainDayDetail"
+}

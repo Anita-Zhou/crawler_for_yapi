@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "教练id": {
+            "type": "string"
+          },
+          "用户": {
+            "type": "string"
+          },
+          "教练名称": {
+            "type": "string"
+          },
+          "头像": {
+            "type": "string"
+          },
+          "introduce": {
+            "type": "string",
+            "default": "个人介绍"
+          },
+          "statement": {
+            "type": "string",
+            "default": "个人宣言"
+          }
+        },
+        "$$ref": "#/components/schemas/HotCoachResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListHotCoachResponse"
+}

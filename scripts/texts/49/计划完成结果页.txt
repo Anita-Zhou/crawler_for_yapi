@@ -1,0 +1,289 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "trainingTime": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalCapacity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalCalorie": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "avgHeartRate": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "doneLessons": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalLessons": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "doneDay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalDay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "gymer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "健客id"
+            },
+            "gymerName": {
+              "type": "string",
+              "default": "健客名"
+            },
+            "nickName": {
+              "type": "string",
+              "default": "昵称"
+            },
+            "avatarId": {
+              "type": "string",
+              "default": "头像"
+            },
+            "birthdate": {
+              "type": "string",
+              "default": "出生日期"
+            },
+            "contactMobile": {
+              "type": "string",
+              "default": "联系手机号"
+            },
+            "contactEmail": {
+              "type": "string",
+              "default": "联系邮箱"
+            },
+            "realName": {
+              "type": "string",
+              "default": "真实姓名"
+            },
+            "website": {
+              "type": "string",
+              "default": "个人网站"
+            },
+            "introduce": {
+              "type": "string",
+              "default": "个人介绍"
+            },
+            "status": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "addCountry": {
+              "type": "string",
+              "default": "国家和地区代码"
+            },
+            "addProvince": {
+              "type": "string",
+              "default": "居住省份代码"
+            },
+            "addCity": {
+              "type": "string",
+              "default": "居住城市代码"
+            },
+            "addDistrict": {
+              "type": "string",
+              "default": "居住区"
+            },
+            "address": {
+              "type": "string",
+              "default": "居住地址"
+            },
+            "gender": {
+              "type": "string",
+              "default": "性别国标编码"
+            },
+            "lang": {
+              "type": "string",
+              "default": "用户语言"
+            },
+            "statement": {
+              "type": "string",
+              "default": "个人宣言"
+            },
+            "createTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "gnameUpdateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "gnameUpdateCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "default": "用户信息",
+          "$$ref": "#/components/schemas/Gymer"
+        },
+        "plan": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string",
+              "default": "计划名称"
+            },
+            "planTempId": {
+              "type": "string",
+              "default": "计划模板id"
+            },
+            "catalogId": {
+              "type": "string",
+              "default": "健身需求id"
+            },
+            "gradeId": {
+              "type": "string",
+              "default": "等级"
+            },
+            "useMachine": {
+              "type": "boolean",
+              "default": false
+            },
+            "courseNum": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "groups": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "gymerId": {
+              "type": "string",
+              "default": "健客id"
+            },
+            "avatarId": {
+              "type": "string",
+              "default": "封面"
+            },
+            "title": {
+              "type": "string",
+              "default": "标题"
+            },
+            "bgm": {
+              "type": "string",
+              "default": "背景音乐id"
+            },
+            "description": {
+              "type": "string",
+              "default": "描述"
+            },
+            "rsrcId": {
+              "type": "string",
+              "default": "资源id"
+            },
+            "delayDays": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "businessType": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "coachId": {
+              "type": "string",
+              "default": "教练id"
+            }
+          },
+          "default": "计划信息",
+          "$$ref": "#/components/schemas/Plan"
+        },
+        "planTrainEndV2Responses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "default": "课程名称"
+              },
+              "planFitnessTrainEndResponseList": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "dateTime": {
+                      "type": "string",
+                      "default": "时间"
+                    },
+                    "trainTime": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "totalCapacity": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "totalCalorie": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "avgHeartRate": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
+                  "default": "计划课程训练结束数据",
+                  "$$ref": "#/components/schemas/PlanFitnessTrainEndResponse"
+                },
+                "default": "计划课程训练结束数据"
+              }
+            },
+            "default": "计划课程结束记录",
+            "$$ref": "#/components/schemas/PlanTrainEndV2Response"
+          },
+          "default": "计划课程结束记录"
+        }
+      },
+      "$$ref": "#/components/schemas/PlanEndTrainResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultPlanEndTrainResponse"
+}

@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "消息id"
+          },
+          "sendGymerId": {
+            "type": "string",
+            "default": "发送用户id(默认为0，表示系统消息)"
+          },
+          "coachId": {
+            "type": "string",
+            "default": "教练id"
+          },
+          "tempId": {
+            "type": "string",
+            "default": "计划模板id"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "教练头像"
+          },
+          "receiveGymerId": {
+            "type": "string",
+            "default": "接收用户id"
+          },
+          "reportedGymer": {
+            "type": "string",
+            "default": "被举报人的昵称"
+          },
+          "auditStatus": {
+            "type": "integer",
+            "format": "int32",
+            "default": "审核状态"
+          },
+          "imageId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "title": {
+            "type": "string",
+            "default": "消息标题"
+          },
+          "content": {
+            "type": "string",
+            "default": "消息内容"
+          },
+          "messageType": {
+            "type": "string",
+            "default": "消息类型(01:系统 02游戏, 03训练结果, 04点赞,05评论,06关注,07课堂通知,08计划通知, 09 举报文章成功/失败, 10举报用户成功/失败, 11动态举报后被下架)"
+          },
+          "deviceType": {
+            "type": "string",
+            "default": "设备类型(01:大屏 02:手机)"
+          },
+          "businessId": {
+            "type": "string",
+            "default": "具体的业务id"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "default": "状态"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "创建时间"
+          },
+          "disposeTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "发布时间"
+          },
+          "articleTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "$$ref": "#/components/schemas/MessageNotificationResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListMessageNotificationResponse"
+}

@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "force": {
+            "type": "integer",
+            "format": "int64",
+            "default": "总力量（当且仅当存在无氧运动时大于0）"
+          },
+          "aerobicCalorie": {
+            "type": "integer",
+            "format": "int64",
+            "default": "有氧卡路里"
+          },
+          "anaerobicCalorie": {
+            "type": "integer",
+            "format": "int64",
+            "default": "无氧卡路里"
+          },
+          "anaerobicTime": {
+            "type": "integer",
+            "format": "int64",
+            "default": "无氧时间"
+          },
+          "aerobicTime": {
+            "type": "integer",
+            "format": "int64",
+            "default": "有氧时间"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "开始时间"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "结束时间"
+          }
+        },
+        "$$ref": "#/components/schemas/StatisticDataResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListStatisticDataResponse"
+}

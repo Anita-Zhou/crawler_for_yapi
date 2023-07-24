@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "关卡赛道": {
+            "type": "string"
+          },
+          "排名": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "用户": {
+                  "type": "string"
+                },
+                "名字": {
+                  "type": "string"
+                },
+                "头像": {
+                  "type": "string"
+                },
+                "时长": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "$$ref": "#/components/schemas/KartingOrRacingRankResponse"
+            }
+          }
+        },
+        "$$ref": "#/components/schemas/TacetrackRankResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListTacetrackRankResponse"
+}

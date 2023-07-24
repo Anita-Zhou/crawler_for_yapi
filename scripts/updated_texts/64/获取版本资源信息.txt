@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "resourceId": {
+          "type": "string",
+          "default": "资源id"
+        },
+        "forced": {
+          "type": "integer",
+          "format": "int32",
+          "default": " "
+        },
+        "fileId": {
+          "type": "string",
+          "default": "文件id"
+        },
+        "fileSize": {
+          "type": "integer",
+          "format": "int32",
+          "default": "文件大小"
+        },
+        "version": {
+          "type": "string",
+          "default": "版本号"
+        },
+        "content": {
+          "type": "string",
+          "default": "版本资源内容说明"
+        }
+      },
+      "$$ref": "#/components/schemas/ResourceVersionResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultResourceVersionResponse"
+}

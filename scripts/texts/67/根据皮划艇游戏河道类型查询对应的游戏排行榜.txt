@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "first": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rank": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "nickName": {
+                "type": "string",
+                "default": "用户昵称"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "头像"
+              },
+              "completiontime": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "$$ref": "#/components/schemas/GameRankingResponse"
+          }
+        },
+        "second": {
+          "type": "object",
+          "properties": {
+            "rank": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "gymerId": {
+              "type": "string",
+              "default": "用户id"
+            },
+            "nickName": {
+              "type": "string",
+              "default": "用户昵称"
+            },
+            "avatarId": {
+              "type": "string",
+              "default": "头像"
+            },
+            "completiontime": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createTime": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "$$ref": "#/components/schemas/GameRankingResponse"
+        }
+      },
+      "$$ref": "#/components/schemas/Pair2ListGameRankingResponseGameRankingResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultPair2ListGameRankingResponseGameRankingResponse"
+}

@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "动作id"
+        },
+        "lang": {
+          "type": "string",
+          "default": "语言类型"
+        },
+        "modelId": {
+          "type": "string",
+          "default": "模特id"
+        },
+        "langName": {
+          "type": "string",
+          "default": "语言名称"
+        },
+        "name": {
+          "type": "string",
+          "default": "动作名称"
+        },
+        "intro": {
+          "type": "string",
+          "default": "简介"
+        },
+        "description": {
+          "type": "string",
+          "default": "描述"
+        },
+        "avatarId": {
+          "type": "string",
+          "default": "封面"
+        },
+        "actionVideos": {
+          "type": "array",
+          "description": "动作视频",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "动作视频id"
+              },
+              "formatId": {
+                "type": "string",
+                "default": "视频格式(流畅、标清、高清...)"
+              },
+              "classifyId": {
+                "type": "string",
+                "default": "视频分类(标准视频、讲解视频)"
+              },
+              "videoId": {
+                "type": "string",
+                "default": "视频id"
+              },
+              "viewId": {
+                "type": "string",
+                "default": "视角id"
+              },
+              "langId": {
+                "type": "string",
+                "default": "语言id"
+              }
+            },
+            "description": "动作视频",
+            "$$ref": "#/components/schemas/ActionVideoRequest"
+          }
+        }
+      },
+      "$$ref": "#/components/schemas/ActionLangDetailsResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultActionLangDetailsResponse"
+}

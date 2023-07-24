@@ -1,0 +1,303 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "键id"
+        },
+        "name": {
+          "type": "string",
+          "default": "计划名称"
+        },
+        "planTempId": {
+          "type": "string",
+          "default": "计划模板id"
+        },
+        "catalogId": {
+          "type": "string",
+          "default": "健身需求id"
+        },
+        "gradeId": {
+          "type": "string",
+          "default": "等级"
+        },
+        "useMachine": {
+          "type": "boolean",
+          "default": false
+        },
+        "courseNum": {
+          "type": "integer",
+          "format": "int32",
+          "default": "参加课程数量"
+        },
+        "groups": {
+          "type": "integer",
+          "format": "int32",
+          "default": "组数"
+        },
+        "weekDayNum": {
+          "type": "integer",
+          "format": "int32",
+          "default": "星期几"
+        },
+        "totalDuration": {
+          "type": "integer",
+          "format": "int32",
+          "default": "总持续时间"
+        },
+        "gymerId": {
+          "type": "string",
+          "default": "健客id"
+        },
+        "avatarId": {
+          "type": "string",
+          "default": "封面"
+        },
+        "title": {
+          "type": "string",
+          "default": "标题"
+        },
+        "bgm": {
+          "type": "string",
+          "default": "背景音乐id"
+        },
+        "description": {
+          "type": "string",
+          "default": "描述"
+        },
+        "delayDays": {
+          "type": "integer",
+          "format": "int32",
+          "default": "计划延迟时间"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32",
+          "default": "状态"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "创建时间"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "更新时间"
+        },
+        "coachId": {
+          "type": "string",
+          "default": "教练id"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32",
+          "default": "训练类型"
+        },
+        "coachName": {
+          "type": "string",
+          "default": "教练名称"
+        },
+        "coachAvatar": {
+          "type": "string",
+          "default": "教练头像"
+        },
+        "gppId": {
+          "type": "string",
+          "default": "用户1v1私教计划包Id"
+        },
+        "groupList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "分组id"
+              },
+              "name": {
+                "type": "string",
+                "default": "分组名称"
+              },
+              "dayNum": {
+                "type": "integer",
+                "format": "int32",
+                "default": "总天数/第几天"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32",
+                "default": "第几次/排序"
+              },
+              "courseNum": {
+                "type": "integer",
+                "format": "int32",
+                "default": "参加课程数量"
+              },
+              "groupDay": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "键id"
+                    },
+                    "planTrainTime": {
+                      "type": "string",
+                      "format": "date-time",
+                      "default": "计划训练时间"
+                    },
+                    "courseNum": {
+                      "type": "integer",
+                      "format": "int32",
+                      "default": "参加课程数量"
+                    },
+                    "startTime": {
+                      "type": "string",
+                      "format": "date-time",
+                      "default": "开始时间"
+                    },
+                    "daySeq": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "courseList": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "default": "主键id"
+                          },
+                          "seq": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": "第几次/排序"
+                          },
+                          "courseId": {
+                            "type": "string",
+                            "default": "课程id"
+                          },
+                          "courseName": {
+                            "type": "string",
+                            "default": "课程名称"
+                          },
+                          "avatarId": {
+                            "type": "string",
+                            "default": "课程背景"
+                          },
+                          "totalDuration": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": "总持续时间"
+                          },
+                          "gradeId": {
+                            "type": "string",
+                            "default": "课程等级"
+                          },
+                          "startTime": {
+                            "type": "string",
+                            "format": "date-time",
+                            "default": "开始时间"
+                          },
+                          "endTime": {
+                            "type": "string",
+                            "format": "date-time",
+                            "default": "结束时间"
+                          },
+                          "status": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": "状态"
+                          },
+                          "categoryList": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "default": "部位id"
+                                },
+                                "imageId": {
+                                  "type": "string",
+                                  "default": "配件图标"
+                                },
+                                "actionId": {
+                                  "type": "string",
+                                  "default": "动作id"
+                                }
+                              },
+                              "default": "器械列表",
+                              "$$ref": "#/components/schemas/ProdCategoryResponse"
+                            },
+                            "default": "器械列表"
+                          },
+                          "bodyParts": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "default": "部位id"
+                                },
+                                "pid": {
+                                  "type": "string",
+                                  "default": "父级部位id(0为顶级)"
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "default": "部位名称"
+                                },
+                                "rsrcId": {
+                                  "type": "string",
+                                  "default": "资源id"
+                                }
+                              },
+                              "default": "部位",
+                              "$$ref": "#/components/schemas/BodyPart"
+                            },
+                            "default": "部位"
+                          },
+                          "end": {
+                            "type": "boolean",
+                            "default": "是否结束"
+                          }
+                        },
+                        "$$ref": "#/components/schemas/PlanTrainDayCourseDetail"
+                      }
+                    }
+                  },
+                  "$$ref": "#/components/schemas/PlanGroupDayDetail"
+                }
+              }
+            },
+            "$$ref": "#/components/schemas/PlanGroupDetails"
+          }
+        }
+      },
+      "$$ref": "#/components/schemas/PlanDetails"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultPlanDetails"
+}

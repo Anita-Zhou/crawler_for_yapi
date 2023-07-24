@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "版本id"
+              },
+              "version": {
+                "type": "string",
+                "default": "版本号"
+              },
+              "resourceId": {
+                "type": "string",
+                "default": "资源id"
+              },
+              "fileId": {
+                "type": "string",
+                "default": "文件id"
+              },
+              "description": {
+                "type": "string",
+                "default": "描述"
+              },
+              "fileSize": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "forced": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "type": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createBy": {
+                "type": "string",
+                "default": "创建人"
+              },
+              "updateBy": {
+                "type": "string",
+                "default": "修改人"
+              }
+            },
+            "$$ref": "#/components/schemas/ResourceVersion"
+          }
+        },
+        "searchCount": {
+          "type": "boolean"
+        },
+        "hitCount": {
+          "type": "boolean"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "$$ref": "#/components/schemas/IPageResourceVersion"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPageResourceVersion"
+}

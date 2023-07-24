@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "健客id"
+        },
+        "gymerName": {
+          "type": "string",
+          "default": "健客名"
+        },
+        "nickName": {
+          "type": "string",
+          "default": "昵称"
+        },
+        "avatarId": {
+          "type": "string",
+          "default": "头像"
+        },
+        "birthdate": {
+          "type": "string",
+          "default": "出生日期"
+        },
+        "contactMobile": {
+          "type": "string",
+          "default": "联系手机号"
+        },
+        "contactEmail": {
+          "type": "string",
+          "default": "联系邮箱"
+        },
+        "realName": {
+          "type": "string",
+          "default": "真实姓名"
+        },
+        "website": {
+          "type": "string",
+          "default": "个人网站"
+        },
+        "introduce": {
+          "type": "string",
+          "default": "个人介绍"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32",
+          "default": "状态"
+        },
+        "addCountry": {
+          "type": "string",
+          "default": "国家和地区代码"
+        },
+        "addProvince": {
+          "type": "string",
+          "default": "居住省份代码"
+        },
+        "addCity": {
+          "type": "string",
+          "default": "居住城市代码"
+        },
+        "addDistrict": {
+          "type": "string",
+          "default": "居住区"
+        },
+        "address": {
+          "type": "string",
+          "default": "居住地址"
+        },
+        "gender": {
+          "type": "string",
+          "default": "性别国标编码"
+        },
+        "lang": {
+          "type": "string",
+          "default": "用户语言"
+        },
+        "statement": {
+          "type": "string",
+          "default": "个人宣言"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "创建时间"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "更新时间"
+        },
+        "gnameUpdateTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "gname上次更改时间"
+        },
+        "gnameUpdateCount": {
+          "type": "integer",
+          "format": "int32",
+          "default": "gname总更改次数"
+        }
+      },
+      "default": "用户信息",
+      "$$ref": "#/components/schemas/Gymer"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultGymer"
+}

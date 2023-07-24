@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "string",
+            "default": "父级id"
+          },
+          "name": {
+            "type": "string",
+            "default": "勋章名称"
+          },
+          "id": {
+            "type": "string",
+            "default": "id"
+          },
+          "gymerId": {
+            "type": "string",
+            "default": "用户id"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "reachValue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string",
+            "default": "类型"
+          },
+          "isAcquire": {
+            "type": "string",
+            "default": "是否获得"
+          }
+        },
+        "$$ref": "#/components/schemas/GymerMedalResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListGymerMedalResponse"
+}

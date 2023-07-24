@@ -1,0 +1,109 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64",
+          "default": "身高"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64",
+          "default": "当前页"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "键id"
+              },
+              "supplier": {
+                "type": "string"
+              },
+              "supplierId": {
+                "type": "string"
+              },
+              "materialCode": {
+                "type": "string",
+                "default": "物料代码"
+              },
+              "materialName": {
+                "type": "string",
+                "default": "物料名称"
+              },
+              "models": {
+                "type": "string"
+              },
+              "purchasingNum": {
+                "type": "integer",
+                "format": "int32",
+                "default": "购买数量"
+              },
+              "price": {
+                "type": "string"
+              },
+              "taxInclusive": {
+                "type": "string",
+                "default": "含税价格"
+              },
+              "remark": {
+                "type": "string",
+                "default": "备注"
+              },
+              "billDate": {
+                "type": "string",
+                "format": "date-time",
+                "default": "下单时间"
+              },
+              "rating": {
+                "type": "string",
+                "default": "评价"
+              }
+            },
+            "$$ref": "#/components/schemas/JdySupplierPurchaseHistory"
+          }
+        },
+        "searchCount": {
+          "type": "boolean",
+          "default": "搜索量"
+        },
+        "hitCount": {
+          "type": "boolean",
+          "default": "点击量"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64",
+          "default": "页面数"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "default": "每页显示条数，默认 10"
+        }
+      },
+      "$$ref": "#/components/schemas/IPageJdySupplierPurchaseHistory"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPageJdySupplierPurchaseHistory"
+}

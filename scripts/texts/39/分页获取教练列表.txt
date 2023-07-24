@@ -1,0 +1,114 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "教练id"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "name": {
+                "type": "string",
+                "default": "教练名称"
+              },
+              "educationBackground": {
+                "type": "string",
+                "default": "学历"
+              },
+              "mobile": {
+                "type": "string",
+                "default": "手机号"
+              },
+              "province": {
+                "type": "string",
+                "default": "省"
+              },
+              "city": {
+                "type": "string",
+                "default": "市"
+              },
+              "district": {
+                "type": "string",
+                "default": "区"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "registerTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createBy": {
+                "type": "string",
+                "default": "创建人"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updateBy": {
+                "type": "string",
+                "default": "修改人"
+              }
+            },
+            "default": "教练信息",
+            "$$ref": "#/components/schemas/Coach"
+          }
+        },
+        "searchCount": {
+          "type": "boolean"
+        },
+        "hitCount": {
+          "type": "boolean"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "$$ref": "#/components/schemas/IPageCoach"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPageCoach"
+}

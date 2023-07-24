@@ -1,0 +1,106 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64",
+          "default": "身高"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64",
+          "default": "当前页"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "广告id"
+              },
+              "link": {
+                "type": "string",
+                "default": "链接"
+              },
+              "advertisingImages": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "键id"
+                    },
+                    "advertId": {
+                      "type": "string",
+                      "default": "广告id"
+                    },
+                    "pixelId": {
+                      "type": "string",
+                      "default": "像素id"
+                    },
+                    "imageId": {
+                      "type": "string",
+                      "default": "imageId"
+                    },
+                    "rsrcId": {
+                      "type": "string",
+                      "default": "资源id"
+                    }
+                  },
+                  "default": "图片集合",
+                  "$$ref": "#/components/schemas/AdvertisingImage"
+                },
+                "default": "图片集合"
+              },
+              "externalLink": {
+                "type": "boolean",
+                "default": "外部链接"
+              }
+            },
+            "$$ref": "#/components/schemas/AdvertResponse"
+          }
+        },
+        "searchCount": {
+          "type": "boolean",
+          "default": "搜索量"
+        },
+        "hitCount": {
+          "type": "boolean",
+          "default": "点击量"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64",
+          "default": "页面数"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "default": "每页显示条数，默认 10"
+        }
+      },
+      "$$ref": "#/components/schemas/IPageAdvertResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPageAdvertResponse"
+}

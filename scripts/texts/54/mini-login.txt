@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tokenId": {
+          "type": "string",
+          "default": "tokenId"
+        },
+        "loginId": {
+          "type": "string",
+          "default": "loginId"
+        },
+        "accessToken": {
+          "type": "string",
+          "default": "登录TOKEN"
+        },
+        "refreshToken": {
+          "type": "string",
+          "default": "续约TOKEN"
+        }
+      },
+      "$$ref": "#/components/schemas/MiniLoginResult"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultMiniLoginResult"
+}

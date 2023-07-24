@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "component": {
+            "type": "string",
+            "default": "权限id"
+          },
+          "path": {
+            "type": "string",
+            "default": "父级id"
+          },
+          "title": {
+            "type": "string",
+            "default": "权限名称"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "icon": {
+            "type": "string",
+            "default": "图标"
+          },
+          "menuType": {
+            "type": "string",
+            "default": "菜单类型"
+          },
+          "menuId": {
+            "type": "string"
+          }
+        },
+        "$$ref": "#/components/schemas/QueryAdminPermissionResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListQueryAdminPermissionResponse"
+}

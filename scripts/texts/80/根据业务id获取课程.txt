@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "number"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "additionalProp1": {
+          "type": "object",
+          "properties": {}
+        },
+        "additionalProp2": {
+          "type": "object",
+          "properties": {}
+        },
+        "additionalProp3": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "avatarId": {
+            "type": "string"
+          },
+          "grade": {
+            "type": "string"
+          },
+          "prodCategory": {
+            "type": "string"
+          },
+          "participationPeopleNumber": {
+            "type": "number"
+          },
+          "gymeraAvatarIds": {
+            "type": "string"
+          },
+          "useMachine": {
+            "type": "boolean"
+          },
+          "bodyParts": {
+            "type": "string"
+          },
+          "totalDuration": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

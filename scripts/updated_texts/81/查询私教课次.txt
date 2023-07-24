@@ -1,0 +1,116 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "私教课次id"
+          },
+          "coachId": {
+            "type": "string",
+            "default": "教练id"
+          },
+          "name": {
+            "type": "string",
+            "default": "课名"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "开始时间"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "结束时间"
+          },
+          "limitNumber": {
+            "type": "integer",
+            "format": "int64",
+            "default": "限制人数"
+          },
+          "reserveNumber": {
+            "type": "integer",
+            "format": "int64",
+            "default": "预约号"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int64",
+            "default": "状态"
+          },
+          "fully": {
+            "type": "boolean",
+            "default": false
+          },
+          "coachName": {
+            "type": "string",
+            "default": "教练名称"
+          },
+          "coachAvatarId": {
+            "type": "string",
+            "default": "教练头像"
+          },
+          "detail": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "主键id"
+              },
+              "coachId": {
+                "type": "string",
+                "default": "教练id"
+              },
+              "pecId": {
+                "type": "string",
+                "default": "私教课程id"
+              },
+              "startTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "开始时间"
+              },
+              "endTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "结束时间"
+              },
+              "limitNumber": {
+                "type": "integer",
+                "format": "int64",
+                "default": "限制人数"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int64",
+                "default": "状态"
+              }
+            },
+            "$$ref": "#/components/schemas/PrivateEducationTime"
+          }
+        },
+        "$$ref": "#/components/schemas/PrivateEducationTimeDetail"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListPrivateEducationTimeDetail"
+}

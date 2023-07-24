@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "性别": {
+          "type": "string"
+        },
+        "年龄": {
+          "type": "string"
+        },
+        "身高": {
+          "type": "string"
+        },
+        "体重": {
+          "type": "string"
+        },
+        "运动偏好": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "用戶id": {
+                "type": "string"
+              },
+              "栏目id": {
+                "type": "string"
+              },
+              "创建时间": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "default": "爱好",
+            "$$ref": "#/components/schemas/Favorite"
+          }
+        },
+        "伤病史": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "运动时间": {
+          "type": "string"
+        },
+        "消耗": {
+          "type": "string"
+        },
+        "容量": {
+          "type": "string"
+        },
+        "grade": {
+          "type": "string",
+          "default": "健身经验等级 01:初级 02:中级 03:高级"
+        }
+      },
+      "$$ref": "#/components/schemas/CoachExerciseResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultCoachExerciseResponse"
+}

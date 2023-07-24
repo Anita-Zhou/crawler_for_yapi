@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "动作视频id"
+          },
+          "actionId": {
+            "type": "string",
+            "default": "动作id"
+          },
+          "formatId": {
+            "type": "string",
+            "default": "视频格式(流畅、标清、高清...)"
+          },
+          "classifyId": {
+            "type": "string",
+            "default": "视频分类(标准视频、讲解视频)"
+          },
+          "modelId": {
+            "type": "string",
+            "default": "模特id"
+          },
+          "videoId": {
+            "type": "string",
+            "default": "视频id"
+          },
+          "viewId": {
+            "type": "string",
+            "default": "视角id"
+          },
+          "langId": {
+            "type": "string",
+            "default": "语言id"
+          },
+          "rsrcId": {
+            "type": "string",
+            "default": "资源id"
+          }
+        },
+        "default": "动作视频(包含中英文的, all)",
+        "$$ref": "#/components/schemas/ActionVideo"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListActionVideo"
+}

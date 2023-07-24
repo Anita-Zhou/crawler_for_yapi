@@ -1,0 +1,207 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "用户id"
+        },
+        "articleId": {
+          "type": "string",
+          "default": "文章id"
+        },
+        "头像": {
+          "type": "string"
+        },
+        "昵称": {
+          "type": "string"
+        },
+        "关注状态(1,关注2,相互关注3,已关注4,回关)": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "文件id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "内容": {
+          "type": "string"
+        },
+        "点赞数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "点赞人信息": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "健客id"
+              },
+              "gymerName": {
+                "type": "string",
+                "default": "健客名"
+              },
+              "nickName": {
+                "type": "string",
+                "default": "昵称"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "头像"
+              },
+              "birthdate": {
+                "type": "string",
+                "default": "出生日期"
+              },
+              "contactMobile": {
+                "type": "string",
+                "default": "联系手机号"
+              },
+              "contactEmail": {
+                "type": "string",
+                "default": "联系邮箱"
+              },
+              "realName": {
+                "type": "string",
+                "default": "真实姓名"
+              },
+              "website": {
+                "type": "string",
+                "default": "个人网站"
+              },
+              "introduce": {
+                "type": "string",
+                "default": "个人介绍"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "addCountry": {
+                "type": "string",
+                "default": "国家和地区代码"
+              },
+              "addProvince": {
+                "type": "string",
+                "default": "居住省份代码"
+              },
+              "addCity": {
+                "type": "string",
+                "default": "居住城市代码"
+              },
+              "addDistrict": {
+                "type": "string",
+                "default": "居住区"
+              },
+              "address": {
+                "type": "string",
+                "default": "居住地址"
+              },
+              "gender": {
+                "type": "string",
+                "default": "性别国标编码"
+              },
+              "lang": {
+                "type": "string",
+                "default": "用户语言"
+              },
+              "statement": {
+                "type": "string",
+                "default": "个人宣言"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "gnameUpdateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "gnameUpdateCount": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "default": "用户信息",
+            "$$ref": "#/components/schemas/Gymer"
+          }
+        },
+        "创建时间": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "点赞状态(1,已点赞 0,未点赞)": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "评论数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "type": "string",
+          "default": "类型(01:纯文字 02:文字图片 03:文字视频 04:文字图片视频)"
+        },
+        "文件数据": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "articleId": {
+                "type": "string"
+              },
+              "fileId": {
+                "type": "string"
+              },
+              "formatId": {
+                "type": "string"
+              },
+              "type": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "avatarId": {
+                "type": "string"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "$$ref": "#/components/schemas/GymerArticleFile"
+          }
+        },
+        "role": {
+          "type": "string"
+        }
+      },
+      "$$ref": "#/components/schemas/CommunityResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultCommunityResponse"
+}

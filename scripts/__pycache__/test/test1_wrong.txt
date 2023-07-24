@@ -1,0 +1,89 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string",
+        "default": "计划名称"
+      },
+      "planTempId": {
+        "type": "string",
+        "default": "计划模板id"
+      },
+      "catalogId": {
+        "type": "string",
+        "default": "健身需求id"
+      },
+      "gradeId": {
+        "type": "string",
+        "default": "等级"
+      },
+      "useMachine": {
+        "type": "boolean",
+        "default": false
+      },
+      "courseNum": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "groups": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "gymerId": {
+        "type": "string",
+        "default": "健客id"
+      },
+      "avatarId": {
+        "type": "string",
+        "default": "封面"
+      },
+      "title": {
+        "type": "string",
+        "default": "标题"
+      },
+      "bgm": {
+        "type": "string",
+        "default": "背景音乐id"
+      },
+      "description": {
+        "type": "string",
+        "default": "描述"
+      },
+      "rsrcId": {
+        "type": "string",
+        "default": "资源id"
+      },
+      "delayDays": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "status": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "updateTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "businessType": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "coachId": {
+        "type": "string",
+        "default": "教练id"
+      }
+    },
+    "default": "计划信息",
+    "$$ref": "#/components/schemas/Plan"
+  }
+}

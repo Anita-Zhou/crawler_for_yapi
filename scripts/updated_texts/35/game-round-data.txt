@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "gameId": {
+            "type": "string",
+            "default": "游戏id"
+          },
+          "roundId": {
+            "type": "string",
+            "default": "回合id"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "开始时间"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "结束时间"
+          },
+          "result": {
+            "type": "integer",
+            "format": "int32",
+            "default": "结果"
+          },
+          "volume": {
+            "type": "integer",
+            "format": "int32",
+            "default": " "
+          }
+        },
+        "$$ref": "#/components/schemas/TugOfWarGameRoundDataResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListTugOfWarGameRoundDataResponse"
+}

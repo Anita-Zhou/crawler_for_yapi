@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "键id"
+        },
+        "type": {
+          "type": "string",
+          "default": "任务类型"
+        },
+        "gymerId": {
+          "type": "string",
+          "default": "健客id"
+        },
+        "context": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "byte",
+            "default": "5Lu75Yqh5YaF5a65"
+          },
+          "default": "任务内容"
+        },
+        "createBy": {
+          "type": "string",
+          "default": "创建人"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "创建时间"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32",
+          "default": "状态"
+        },
+        "auditStatus": {
+          "type": "integer",
+          "format": "int32",
+          "default": "审核状态"
+        },
+        "auditBy": {
+          "type": "string",
+          "default": "审核人"
+        },
+        "auditTime": {
+          "type": "string",
+          "format": "date-time",
+          "default": "审核时间"
+        }
+      },
+      "$$ref": "#/components/schemas/AuditTask"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultAuditTask"
+}

@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "权限id"
+        },
+        "name": {
+          "type": "string",
+          "default": "权限名称"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "createBy": {
+          "type": "string",
+          "default": "创建人"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updateBy": {
+          "type": "string",
+          "default": "修改人"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "seq": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "icon": {
+          "type": "string",
+          "default": "图标"
+        },
+        "menuType": {
+          "type": "string",
+          "default": "菜单类型"
+        }
+      },
+      "$$ref": "#/components/schemas/AdminPermission"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultAdminPermission"
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "number"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "additionalProp1": {
+          "type": "object",
+          "properties": {}
+        },
+        "additionalProp2": {
+          "type": "object",
+          "properties": {}
+        },
+        "additionalProp3": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+          
+        },
+        "directory": {
+          "type": "string"
+        },
+        "createTime": {
+          "type": "string"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "extension": {
+          "type": "string"
+        },
+        "businessId": {
+          "type": "string"
+        },
+        "businessType": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "object",
+          "properties": {
+            "additionalProp1": {
+              "type": "string"
+            },
+            "additionalProp2": {
+              "type": "string"
+            },
+            "additionalProp3": {
+              "type": "string"
+            }
+          }
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

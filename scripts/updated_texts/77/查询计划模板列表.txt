@@ -1,0 +1,150 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64",
+          "default": "身高"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64",
+          "default": "当前页"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "计划模板id"
+              },
+              "name": {
+                "type": "string",
+                "default": "计划名称"
+              },
+              "catalogId": {
+                "type": "string",
+                "default": "健身需求id"
+              },
+              "gradeId": {
+                "type": "string",
+                "default": "等级"
+              },
+              "createBy": {
+                "type": "string",
+                "default": "创建者"
+              },
+              "updateBy": {
+                "type": "string",
+                "default": "修改人"
+              },
+              "videoId": {
+                "type": "string",
+                "default": "介绍视频"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "封面"
+              },
+              "useMachine": {
+                "type": "boolean",
+                "default": false
+              },
+              "bgm": {
+                "type": "string",
+                "default": "背景音乐id"
+              },
+              "courseNum": {
+                "type": "integer",
+                "format": "int32",
+                "default": "参加课程数量"
+              },
+              "groups": {
+                "type": "integer",
+                "format": "int32",
+                "default": "组数"
+              },
+              "dayNum": {
+                "type": "integer",
+                "format": "int32",
+                "default": "总天数/第几天"
+              },
+              "title": {
+                "type": "string",
+                "default": "标题"
+              },
+              "description": {
+                "type": "string",
+                "default": "描述"
+              },
+              "rsrcId": {
+                "type": "string",
+                "default": "资源id"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32",
+                "default": "状态"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "创建时间"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "更新时间"
+              },
+              "businessType": {
+                "type": "integer",
+                "format": "int32",
+                "default": "业务类型"
+              }
+            },
+            "$$ref": "#/components/schemas/PlanTemp"
+          }
+        },
+        "searchCount": {
+          "type": "boolean",
+          "default": "搜索量"
+        },
+        "hitCount": {
+          "type": "boolean",
+          "default": "点击量"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64",
+          "default": "页面数"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "default": "每页显示条数，默认 10"
+        }
+      },
+      "$$ref": "#/components/schemas/IPagePlanTemp"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPagePlanTemp"
+}

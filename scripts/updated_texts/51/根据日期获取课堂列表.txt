@@ -1,0 +1,174 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "课堂id"
+          },
+          "name": {
+            "type": "string",
+            "default": "课堂名称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "isOpenVideo": {
+            "type": "boolean",
+            "default": false
+          },
+          "gradeId": {
+            "type": "string",
+            "default": "等级id"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "开始时间"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "结束时间"
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32",
+            "default": " "
+          },
+          "calorie": {
+            "type": "integer",
+            "format": "int32",
+            "default": "训练卡路里"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "default": "状态"
+          },
+          "limitNumber": {
+            "type": "integer",
+            "format": "int32",
+            "default": " "
+          },
+          "reserveNumber": {
+            "type": "integer",
+            "format": "int32",
+            "default": " "
+          },
+          "coachId": {
+            "type": "string",
+            "default": "教练id"
+          },
+          "coach": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "教练id"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "name": {
+                "type": "string",
+                "default": "教练名称"
+              },
+              "educationBackground": {
+                "type": "string",
+                "default": "学历"
+              },
+              "mobile": {
+                "type": "string",
+                "default": "手机号"
+              },
+              "province": {
+                "type": "string",
+                "default": "省"
+              },
+              "city": {
+                "type": "string",
+                "default": "市"
+              },
+              "district": {
+                "type": "string",
+                "default": "区"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32",
+                "default": "第几次/排序"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32",
+                "default": "状态"
+              },
+              "registerTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "注册时间"
+              },
+              "createBy": {
+                "type": "string",
+                "default": "创建人"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "更新时间"
+              },
+              "updateBy": {
+                "type": "string",
+                "default": "修改人"
+              }
+            },
+            "default": "教练信息",
+            "$$ref": "#/components/schemas/Coach"
+          },
+          "classRoomUser": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "classRoomUser": {
+                  "type": "string",
+                  "default": "用户id"
+                },
+                "coachAvatarId": {
+                  "type": "string",
+                  "default": "头像"
+                }
+              },
+              "default": "预约用户信息",
+              "$$ref": "#/components/schemas/ClassRoomUser"
+            },
+            "default": "预约用户信息"
+          }
+        },
+        "$$ref": "#/components/schemas/ClassRoomResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListClassRoomResponse"
+}

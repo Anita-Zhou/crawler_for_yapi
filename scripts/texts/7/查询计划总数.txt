@@ -1,0 +1,466 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "plan": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string",
+              "default": "计划名称"
+            },
+            "planTempId": {
+              "type": "string",
+              "default": "计划模板id"
+            },
+            "catalogId": {
+              "type": "string",
+              "default": "健身需求id"
+            },
+            "gradeId": {
+              "type": "string",
+              "default": "等级"
+            },
+            "useMachine": {
+              "type": "boolean",
+              "default": false
+            },
+            "courseNum": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "groups": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "gymerId": {
+              "type": "string",
+              "default": "健客id"
+            },
+            "avatarId": {
+              "type": "string",
+              "default": "封面"
+            },
+            "title": {
+              "type": "string",
+              "default": "标题"
+            },
+            "bgm": {
+              "type": "string",
+              "default": "背景音乐id"
+            },
+            "description": {
+              "type": "string",
+              "default": "描述"
+            },
+            "rsrcId": {
+              "type": "string",
+              "default": "资源id"
+            },
+            "delayDays": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "businessType": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "coachId": {
+              "type": "string",
+              "default": "教练id"
+            }
+          },
+          "default": "计划信息",
+          "$$ref": "#/components/schemas/Plan"
+        },
+        "diet": {
+          "type": "string"
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "group": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "default": "分组id"
+                  },
+                  "name": {
+                    "type": "string",
+                    "default": "分组名称"
+                  },
+                  "planId": {
+                    "type": "string",
+                    "default": "计划id"
+                  },
+                  "dayNum": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "courseNum": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "description": {
+                    "type": "string",
+                    "default": "描述"
+                  },
+                  "seq": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                },
+                "$$ref": "#/components/schemas/PlanGroup"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "lesson": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "课时id"
+                        },
+                        "avatarId": {
+                          "type": "string",
+                          "default": "封面"
+                        },
+                        "planGroupId": {
+                          "type": "string",
+                          "default": "计划分组id"
+                        },
+                        "planId": {
+                          "type": "string",
+                          "default": "计划id"
+                        },
+                        "totalDuration": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "planTrainTime": {
+                          "type": "string",
+                          "default": "计划训练时间 yyyy-mm-dd"
+                        },
+                        "times": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "power": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "seq": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      },
+                      "$$ref": "#/components/schemas/PlanLessons"
+                    },
+                    "actions": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "groupId": {
+                            "type": "string",
+                            "default": "分组id"
+                          },
+                          "rest": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "id": {
+                            "type": "string",
+                            "default": "动作id"
+                          },
+                          "name": {
+                            "type": "string",
+                            "default": "动作名称"
+                          },
+                          "intro": {
+                            "type": "string",
+                            "default": "动作介绍"
+                          },
+                          "description": {
+                            "type": "string",
+                            "default": "动作描述"
+                          },
+                          "avatarId": {
+                            "type": "string",
+                            "default": "封面id"
+                          },
+                          "poseName": {
+                            "type": "string",
+                            "default": "姿势名称"
+                          },
+                          "times": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "index": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "total": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "batch": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "span": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "leftForce": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "rightForce": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "leftForceMode": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "rightForceMode": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "leftAssist": {
+                            "type": "boolean",
+                            "default": false
+                          },
+                          "rightAssist": {
+                            "type": "boolean",
+                            "default": false
+                          },
+                          "useMachine": {
+                            "type": "integer",
+                            "format": "int32"
+                          },
+                          "actionVideos": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "default": "动作视频id"
+                                },
+                                "actionId": {
+                                  "type": "string",
+                                  "default": "动作id"
+                                },
+                                "formatId": {
+                                  "type": "string",
+                                  "default": "视频格式(流畅、标清、高清...)"
+                                },
+                                "classifyId": {
+                                  "type": "string",
+                                  "default": "视频分类(标准视频、讲解视频)"
+                                },
+                                "modelId": {
+                                  "type": "string",
+                                  "default": "模特id"
+                                },
+                                "videoId": {
+                                  "type": "string",
+                                  "default": "视频id"
+                                },
+                                "viewId": {
+                                  "type": "string",
+                                  "default": "视角id"
+                                },
+                                "langId": {
+                                  "type": "string",
+                                  "default": "语言id"
+                                },
+                                "rsrcId": {
+                                  "type": "string",
+                                  "default": "资源id"
+                                }
+                              },
+                              "default": "动作视频(包含中英文的, all)",
+                              "$$ref": "#/components/schemas/ActionVideo"
+                            }
+                          },
+                          "bodyParts": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "default": "部位id"
+                                },
+                                "courseId": {
+                                  "type": "string",
+                                  "default": "部位id"
+                                },
+                                "pid": {
+                                  "type": "string",
+                                  "default": "部位父级id"
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "default": "部位名称"
+                                },
+                                "actionId": {
+                                  "type": "string",
+                                  "default": "动作id"
+                                },
+                                "areaId": {
+                                  "type": "string",
+                                  "default": "身体区域id"
+                                },
+                                "tiredGradeId": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                }
+                              },
+                              "$$ref": "#/components/schemas/BodyPartResponse"
+                            }
+                          },
+                          "muscles": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "default": "部位id"
+                                },
+                                "courseId": {
+                                  "type": "string",
+                                  "default": "部位id"
+                                },
+                                "pid": {
+                                  "type": "string",
+                                  "default": "部位父级id"
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "default": "部位名称"
+                                },
+                                "actionId": {
+                                  "type": "string",
+                                  "default": "动作id"
+                                },
+                                "areaId": {
+                                  "type": "string",
+                                  "default": "身体区域id"
+                                },
+                                "tiredGradeId": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                }
+                              },
+                              "$$ref": "#/components/schemas/BodyPartResponse"
+                            }
+                          },
+                          "prodCategories": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "description": {
+                                  "type": "string"
+                                },
+                                "imageId": {
+                                  "type": "string"
+                                },
+                                "parentId": {
+                                  "type": "string"
+                                },
+                                "seq": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                },
+                                "type": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                }
+                              },
+                              "default": "配件",
+                              "$$ref": "#/components/schemas/ProdCategory"
+                            }
+                          }
+                        },
+                        "$$ref": "#/components/schemas/CourseGroupItemResponse"
+                      }
+                    },
+                    "description": {
+                      "type": "string",
+                      "default": "描述"
+                    },
+                    "end": {
+                      "type": "boolean"
+                    }
+                  },
+                  "$$ref": "#/components/schemas/PlanLessonsDetailss"
+                }
+              }
+            },
+            "$$ref": "#/components/schemas/PlanGroupDetailss"
+          }
+        },
+        "weeklyTrainingDays": {
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "$$ref": "#/components/schemas/PlanDetailss"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultPlanDetailss"
+}

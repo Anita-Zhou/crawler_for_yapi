@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "广告id"
+        },
+        "link": {
+          "type": "string",
+          "default": "链接"
+        },
+        "isExternalLink": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "imageId": {
+          "type": "string",
+          "default": "图片id"
+        },
+        "seq": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "showLocation": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pixelId": {
+                "type": "string"
+              },
+              "imageId": {
+                "type": "string"
+              },
+              "langImages": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "langId": {
+                      "type": "string"
+                    },
+                    "imageId": {
+                      "type": "string"
+                    }
+                  },
+                  "$$ref": "#/components/schemas/LangImageRequest"
+                }
+              }
+            },
+            "default": "广告图片",
+            "$$ref": "#/components/schemas/AdvertisingImageResponse"
+          },
+          "default": "广告图片"
+        }
+      },
+      "$$ref": "#/components/schemas/AdvertisingResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultAdvertisingResponse"
+}

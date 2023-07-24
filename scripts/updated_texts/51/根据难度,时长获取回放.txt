@@ -1,0 +1,91 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "课堂id"
+          },
+          "name": {
+            "type": "string",
+            "default": "课堂名称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32",
+            "default": " "
+          },
+          "gradeId": {
+            "type": "string",
+            "default": "等级id"
+          },
+          "prodCategory": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "键id"
+                },
+                "name": {
+                  "type": "string",
+                  "default": "名称"
+                },
+                "description": {
+                  "type": "string",
+                  "default": "详情"
+                },
+                "imageId": {
+                  "type": "string",
+                  "default": " "
+                },
+                "parentId": {
+                  "type": "string",
+                  "default": "父id"
+                },
+                "seq": {
+                  "type": "integer",
+                  "format": "int32",
+                  "default": "第几次/排序"
+                },
+                "type": {
+                  "type": "integer",
+                  "format": "int32",
+                  "default": " "
+                }
+              },
+              "default": "配件",
+              "$$ref": "#/components/schemas/ProdCategory"
+            },
+            "default": "配件信息"
+          }
+        },
+        "$$ref": "#/components/schemas/ClassRoomPlayBackResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListClassRoomPlayBackResponse"
+}

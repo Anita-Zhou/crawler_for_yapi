@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "设备SN"
+              },
+              "account": {
+                "type": "string",
+                "default": "主板序列号"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "online": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "upgrade": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "activeTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "loginTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "logoutTime": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "$$ref": "#/components/schemas/DeviceDetailsResponse"
+          }
+        },
+        "searchCount": {
+          "type": "boolean"
+        },
+        "hitCount": {
+          "type": "boolean"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "$$ref": "#/components/schemas/IPageDeviceDetailsResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultIPageDeviceDetailsResponse"
+}

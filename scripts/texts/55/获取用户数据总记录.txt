@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "被关注用户id"
+        },
+        "gymerId": {
+          "type": "string",
+          "default": "用户id"
+        },
+        "昵称": {
+          "type": "string"
+        },
+        "头像": {
+          "type": "string"
+        },
+        "个人介绍": {
+          "type": "string"
+        },
+        "状态(1,关注2,相互关注3,已关注4,回关)": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "屏蔽状态: 0: 双方都未屏蔽； 1: 我已屏蔽他；2: 他已屏蔽我； 3: 已互相屏蔽": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "关注数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "粉丝数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "获赞数量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "运动时长": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "总消耗(卡路里)": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "总做功": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "注册时间": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "总力量": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "角色": {
+          "type": "string"
+        },
+        "教练个人照片": {
+          "type": "string"
+        }
+      },
+      "$$ref": "#/components/schemas/UserHomePageResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultUserHomePageResponse"
+}

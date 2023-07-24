@@ -1,0 +1,125 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "动作id"
+          },
+          "name": {
+            "type": "string",
+            "default": "动作名称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面id"
+          },
+          "bodyPart": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "部位id"
+              },
+              "pid": {
+                "type": "string",
+                "default": "父级部位id(0为顶级)"
+              },
+              "name": {
+                "type": "string",
+                "default": "部位名称"
+              },
+              "rsrcId": {
+                "type": "string",
+                "default": "资源id"
+              }
+            },
+            "default": "部位",
+            "$$ref": "#/components/schemas/BodyPart"
+          },
+          "muscle": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "部位id"
+              },
+              "pid": {
+                "type": "string",
+                "default": "父级部位id(0为顶级)"
+              },
+              "name": {
+                "type": "string",
+                "default": "部位名称"
+              },
+              "rsrcId": {
+                "type": "string",
+                "default": "资源id"
+              }
+            },
+            "default": "部位",
+            "$$ref": "#/components/schemas/BodyPart"
+          },
+          "prodCategoryList": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "imageId": {
+                  "type": "string"
+                },
+                "parentId": {
+                  "type": "string"
+                },
+                "seq": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "type": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "default": "配件",
+              "$$ref": "#/components/schemas/ProdCategory"
+            },
+            "default": "配件"
+          },
+          "useMachine": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "$$ref": "#/components/schemas/ActionResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListActionResponse"
+}

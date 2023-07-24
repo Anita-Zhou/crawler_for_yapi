@@ -1,0 +1,167 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "动作id"
+          },
+          "chineseName": {
+            "type": "string",
+            "default": "动作中文名称"
+          },
+          "name": {
+            "type": "string",
+            "default": "动作名称"
+          },
+          "intro": {
+            "type": "string",
+            "default": "简介"
+          },
+          "actionType": {
+            "type": "string",
+            "default": "动作类型(力量训练、减脂训练、拉伸训练)"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "封面"
+          },
+          "description": {
+            "type": "string",
+            "default": "描述"
+          },
+          "rsrcId": {
+            "type": "string",
+            "default": "资源id"
+          },
+          "useMachine": {
+            "type": "integer",
+            "format": "int32",
+            "default": "是否使用机器"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "default": "状态"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "创建时间"
+          },
+          "createBy": {
+            "type": "string",
+            "default": "创建人"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "更新时间"
+          },
+          "updateBy": {
+            "type": "string",
+            "default": "修改人"
+          },
+          "bodyParts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "部位id"
+                },
+                "courseId": {
+                  "type": "string",
+                  "default": "部位id"
+                },
+                "pid": {
+                  "type": "string",
+                  "default": "部位父级id"
+                },
+                "name": {
+                  "type": "string",
+                  "default": "部位名称"
+                },
+                "actionId": {
+                  "type": "string",
+                  "default": "动作id"
+                },
+                "areaId": {
+                  "type": "string",
+                  "default": "身体区域id"
+                },
+                "tiredGradeId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "default": "疲劳程度id"
+                }
+              },
+              "$$ref": "#/components/schemas/BodyPartResponse"
+            }
+          },
+          "prodCategories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "键id"
+                },
+                "name": {
+                  "type": "string",
+                  "default": "项目名称"
+                },
+                "description": {
+                  "type": "string",
+                  "default": "详情"
+                },
+                "imageId": {
+                  "type": "string",
+                  "default": "imageId"
+                },
+                "parentId": {
+                  "type": "string",
+                  "default": "父id"
+                },
+                "seq": {
+                  "type": "integer",
+                  "format": "int32",
+                  "default": "第几次/排序"
+                },
+                "type": {
+                  "type": "integer",
+                  "format": "int32",
+                  "default": "项目类型"
+                }
+              },
+              "default": "配件",
+              "$$ref": "#/components/schemas/ProdCategory"
+            }
+          }
+        },
+        "$$ref": "#/components/schemas/ActionResResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListActionResResponse"
+}

@@ -1,0 +1,293 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "plan": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "键id"
+              },
+              "name": {
+                "type": "string",
+                "default": "计划名称"
+              },
+              "planTempId": {
+                "type": "string",
+                "default": "计划模板id"
+              },
+              "catalogId": {
+                "type": "string",
+                "default": "健身需求id"
+              },
+              "gradeId": {
+                "type": "string",
+                "default": "等级"
+              },
+              "useMachine": {
+                "type": "boolean",
+                "default": false
+              },
+              "courseNum": {
+                "type": "integer",
+                "format": "int32",
+                "default": "参加课程数量"
+              },
+              "groups": {
+                "type": "integer",
+                "format": "int32",
+                "default": "组数"
+              },
+              "gymerId": {
+                "type": "string",
+                "default": "健客id"
+              },
+              "avatarId": {
+                "type": "string",
+                "default": "封面"
+              },
+              "title": {
+                "type": "string",
+                "default": "标题"
+              },
+              "bgm": {
+                "type": "string",
+                "default": "背景音乐id"
+              },
+              "description": {
+                "type": "string",
+                "default": "描述"
+              },
+              "rsrcId": {
+                "type": "string",
+                "default": "资源id"
+              },
+              "delayDays": {
+                "type": "integer",
+                "format": "int32",
+                "default": "计划延迟时间"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32",
+                "default": "状态"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "创建时间"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time",
+                "default": "更新时间"
+              },
+              "businessType": {
+                "type": "integer",
+                "format": "int32",
+                "default": "业务类型"
+              },
+              "coachId": {
+                "type": "string",
+                "default": "教练id"
+              }
+            },
+            "default": "计划信息",
+            "$$ref": "#/components/schemas/Plan",
+            "description": "待执行的计划"
+          },
+          "lesson": {
+            "type": "object",
+            "properties": {
+              "lesson": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "default": "课时id"
+                  },
+                  "avatarId": {
+                    "type": "string",
+                    "default": "封面"
+                  },
+                  "planGroupId": {
+                    "type": "string",
+                    "default": "计划分组id"
+                  },
+                  "planId": {
+                    "type": "string",
+                    "default": "计划id"
+                  },
+                  "totalDuration": {
+                    "type": "integer",
+                    "format": "int32",
+                    "default": "总持续时间"
+                  },
+                  "planTrainTime": {
+                    "type": "string",
+                    "default": "计划训练时间 yyyy-mm-dd"
+                  },
+                  "times": {
+                    "type": "integer",
+                    "format": "int32",
+                    "default": "次数"
+                  },
+                  "power": {
+                    "type": "integer",
+                    "format": "int32",
+                    "default": "power"
+                  },
+                  "seq": {
+                    "type": "integer",
+                    "format": "int32",
+                    "default": "第几次/排序"
+                  }
+                },
+                "$$ref": "#/components/schemas/PlanLessons"
+              },
+              "actions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "default": "动作名称"
+                    },
+                    "avatarId": {
+                      "type": "string",
+                      "default": "封面"
+                    },
+                    "action": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "键id"
+                        },
+                        "planId": {
+                          "type": "string",
+                          "default": "计划id"
+                        },
+                        "actionId": {
+                          "type": "string",
+                          "default": "动作id"
+                        },
+                        "type": {
+                          "type": "string",
+                          "default": "类型 01-热身 02-标准 03-拉伸"
+                        },
+                        "times": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "次数"
+                        },
+                        "power": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "power"
+                        },
+                        "batch": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "组数"
+                        },
+                        "leftForce": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "左边拉力"
+                        },
+                        "rightForce": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "右边拉力"
+                        },
+                        "leftForceMode": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "左边力量模式"
+                        },
+                        "rightForceMode": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "右边力量模式"
+                        }
+                      },
+                      "$$ref": "#/components/schemas/PlanActions"
+                    },
+                    "delta": {
+                      "type": "object",
+                      "properties": {
+                        "planGroupId": {
+                          "type": "string",
+                          "default": "课时分组id"
+                        },
+                        "planActionId": {
+                          "type": "string",
+                          "default": "计划动作id"
+                        },
+                        "timesDelta": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "时间差"
+                        },
+                        "powerDelta": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "力量差"
+                        },
+                        "span": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "平均心率"
+                        },
+                        "seq": {
+                          "type": "integer",
+                          "format": "int32",
+                          "default": "第几次/排序"
+                        }
+                      },
+                      "$$ref": "#/components/schemas/PlanDelta"
+                    }
+                  },
+                  "$$ref": "#/components/schemas/PlanActionsDetails"
+                }
+              },
+              "description": {
+                "type": "string",
+                "default": "描述"
+              },
+              "end": {
+                "type": "boolean",
+                "default": "是否结束"
+              }
+            },
+            "$$ref": "#/components/schemas/PlanLessonsDetails",
+            "description": "待执行的课时"
+          }
+        },
+        "$$ref": "#/components/schemas/QueryFitnessPlanLessonsResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListQueryFitnessPlanLessonsResponse"
+}

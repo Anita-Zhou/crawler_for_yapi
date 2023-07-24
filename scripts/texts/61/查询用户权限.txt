@@ -1,0 +1,168 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "adminRole": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "角色id"
+              },
+              "name": {
+                "type": "string",
+                "default": "角色名称"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "createBy": {
+                "type": "string",
+                "default": "创建人"
+              },
+              "updateBy": {
+                "type": "string",
+                "default": "修改人"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "default": "角色信息",
+            "$$ref": "#/components/schemas/AdminRoleDTO"
+          },
+          "default": "角色信息"
+        },
+        "adminUserRole": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "userId": {
+                "type": "string",
+                "default": "用户id"
+              },
+              "roleId": {
+                "type": "string",
+                "default": "角色id"
+              },
+              "create_by": {
+                "type": "string",
+                "default": "创建者"
+              },
+              "createTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "update_by": {
+                "type": "string",
+                "default": "修改人"
+              },
+              "updateTime": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "default": "用户角色关联信息",
+            "$$ref": "#/components/schemas/AdminUserRoleDTO"
+          },
+          "default": "用户角色关联信息"
+        },
+        "adminUser": {
+          "type": "object",
+          "properties": {
+            "用户id": {
+              "type": "string"
+            },
+            "用户名": {
+              "type": "string"
+            },
+            "状态 -2：逻辑删除 -1:锁定 0:禁用 1:启用": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "头像id": {
+              "type": "string"
+            },
+            "创建时间": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "修改时间": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "default": "用户信息",
+          "$$ref": "#/components/schemas/AdminUser"
+        },
+        "permissionInfo": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "default": "权限id"
+              },
+              "path": {
+                "type": "string",
+                "default": "父级id"
+              },
+              "title": {
+                "type": "string",
+                "default": "权限名称"
+              },
+              "status": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "seq": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "icon": {
+                "type": "string",
+                "default": "图标"
+              },
+              "menuType": {
+                "type": "string",
+                "default": "菜单类型"
+              },
+              "menuId": {
+                "type": "string"
+              }
+            },
+            "$$ref": "#/components/schemas/QueryAdminPermissionResponse"
+          }
+        }
+      },
+      "$$ref": "#/components/schemas/QueryRolePermissionResponse"
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultQueryRolePermissionResponse"
+}

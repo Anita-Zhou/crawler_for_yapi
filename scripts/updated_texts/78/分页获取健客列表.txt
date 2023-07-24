@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "properties": {}
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": "健客id"
+          },
+          "gymerName": {
+            "type": "string",
+            "default": "健客名"
+          },
+          "nickName": {
+            "type": "string",
+            "default": "昵称"
+          },
+          "avatarId": {
+            "type": "string",
+            "default": "头像"
+          },
+          "contactMobile": {
+            "type": "string",
+            "default": "联系手机号"
+          },
+          "contactEmail": {
+            "type": "string",
+            "default": "联系邮箱"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "default": "状态"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "创建时间"
+          },
+          "loginTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "登入时间"
+          },
+          "failNum": {
+            "type": "integer",
+            "format": "int32",
+            "default": "失败次数"
+          },
+          "onLine": {
+            "type": "integer",
+            "format": "int32",
+            "default": "是否在线"
+          }
+        },
+        "$$ref": "#/components/schemas/GymerManageResponse"
+      }
+    }
+  },
+  "$$ref": "#/components/schemas/ValueResultListGymerManageResponse"
+}
