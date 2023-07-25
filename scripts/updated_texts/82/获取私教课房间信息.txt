@@ -18,18 +18,17 @@
     "value": {
       "type": "object",
       "properties": {
-        "highestScore": {
+        "code": {
           "type": "string",
-          "default": "历史最高分"
+          "default": "私教课code"
         },
-        "bestRanking": {
-          "type": "integer",
-          "format": "int32",
-          "default": " "
+        "group": {
+          "type": "string",
+          "default": "私教课group"
         }
       },
-      "$$ref": "#/components/schemas/NoInstrumentRankingResponse"
+      "$$ref": "#/components/schemas/PrivateEducationCourseResponse"
     }
   },
-  "$$ref": "#/components/schemas/ValueResultNoInstrumentRankingResponse"
+  "$$ref": "#/components/schemas/ValueResultPrivateEducationCourseResponse"
 }

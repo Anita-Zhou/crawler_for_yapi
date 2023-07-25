@@ -34,23 +34,28 @@
           },
           "startTime": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "default": "开始时间"
           },
           "endTime": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "default": "结束时间"
           },
           "limitNumber": {
             "type": "integer",
-            "format": "int64"
+            "format": "int64",
+            "default": "限制人数"
           },
           "reserveNumber": {
             "type": "integer",
-            "format": "int64"
+            "format": "int64",
+            "default": "预约号"
           },
           "status": {
             "type": "integer",
-            "format": "int64"
+            "format": "int64",
+            "default": "状态"
           },
           "fully": {
             "type": "boolean",
@@ -81,19 +86,23 @@
               },
               "startTime": {
                 "type": "string",
-                "format": "date-time"
+                "format": "date-time",
+                "default": "开始时间"
               },
               "endTime": {
                 "type": "string",
-                "format": "date-time"
+                "format": "date-time",
+                "default": "结束时间"
               },
               "limitNumber": {
                 "type": "integer",
-                "format": "int64"
+                "format": "int64",
+                "default": "限制人数"
               },
               "status": {
                 "type": "integer",
-                "format": "int64"
+                "format": "int64",
+                "default": "状态"
               }
             },
             "$$ref": "#/components/schemas/PrivateEducationTime"

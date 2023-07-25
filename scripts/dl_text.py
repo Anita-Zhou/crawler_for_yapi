@@ -21,7 +21,7 @@ END_FOLDER_NUM = 83
 #TODO: can be later changed into pass in using flags
 # Login email
 # TODO: change the username
-USERNAME = 'admin@admin.com
+USERNAME = '1011433458@qq.com'
 # Login password
 # TODO: change the password
 PASSWORD = 'ymfe.org'
@@ -79,7 +79,7 @@ Iterate through API folders
 '''
 # Open all the categorized folders in the left
 # for i in range(START_FOLDER_NUM + 1, END_FOLDER_NUM + 1):
-for i in range(62, 83):
+for i in range(82, 85):
     # Create the directory if it doesn't exist
     output_directory = "./texts/" + str(i-1)
     os.makedirs(output_directory, exist_ok=True)

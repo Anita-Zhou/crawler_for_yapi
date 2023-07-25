@@ -240,7 +240,15 @@ def default_helper(p_key, key, value):
             case "deviceId":
                 default_value = "设备id"
             case "grade":
-                default_value = "等级"
+                default_value = "健身经验等级 01:初级 02:中级 03:高级"
+            case "prodCategory":
+                default_value = "配件信息"
+            case "classRoomUser":
+                default_value = "预约用户信息"
+            case "pepdId":
+                default_value = "1v1私教计划包明细id"
+            case "planId":
+                default_value = "计划id"
             case "volume":
                 default_value = " "
             case "reachValue":

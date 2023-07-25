@@ -19,7 +19,8 @@
       "type": "object",
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "default": "键id"
         },
         "name": {
           "type": "string",
@@ -43,19 +44,23 @@
         },
         "courseNum": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "default": "参加课程数量"
         },
         "groups": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "default": "组数"
         },
         "weekDayNum": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "default": "工作日天数"
         },
         "totalDuration": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "default": "总持续时间"
         },
         "gymerId": {
           "type": "string",
@@ -79,19 +84,23 @@
         },
         "delayDays": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "default": "计划延迟时间"
         },
         "status": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "default": "状态"
         },
         "createTime": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "default": "创建时间"
         },
         "updateTime": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "default": "更新时间"
         },
         "coachId": {
           "type": "string",
@@ -99,7 +108,8 @@
         },
         "type": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "default": " "
         },
         "coachName": {
           "type": "string",
@@ -128,15 +138,18 @@
               },
               "dayNum": {
                 "type": "integer",
-                "format": "int32"
+                "format": "int32",
+                "default": "总天数/第几天"
               },
               "seq": {
                 "type": "integer",
-                "format": "int32"
+                "format": "int32",
+                "default": "第几次/排序"
               },
               "courseNum": {
                 "type": "integer",
-                "format": "int32"
+                "format": "int32",
+                "default": "参加课程数量"
               },
               "groupDay": {
                 "type": "array",
@@ -144,23 +157,28 @@
                   "type": "object",
                   "properties": {
                     "id": {
-                      "type": "string"
+                      "type": "string",
+                      "default": "键id"
                     },
                     "planTrainTime": {
                       "type": "string",
-                      "format": "date-time"
+                      "format": "date-time",
+                      "default": "计划训练时间"
                     },
                     "courseNum": {
                       "type": "integer",
-                      "format": "int32"
+                      "format": "int32",
+                      "default": "参加课程数量"
                     },
                     "startTime": {
                       "type": "string",
-                      "format": "date-time"
+                      "format": "date-time",
+                      "default": "开始时间"
                     },
                     "daySeq": {
                       "type": "integer",
-                      "format": "int32"
+                      "format": "int32",
+                      "default": " "
                     },
                     "courseList": {
                       "type": "array",
@@ -173,7 +191,8 @@
                           },
                           "seq": {
                             "type": "integer",
-                            "format": "int32"
+                            "format": "int32",
+                            "default": "第几次/排序"
                           },
                           "courseId": {
                             "type": "string",
@@ -189,7 +208,8 @@
                           },
                           "totalDuration": {
                             "type": "integer",
-                            "format": "int32"
+                            "format": "int32",
+                            "default": "总持续时间"
                           },
                           "gradeId": {
                             "type": "string",
@@ -197,15 +217,18 @@
                           },
                           "startTime": {
                             "type": "string",
-                            "format": "date-time"
+                            "format": "date-time",
+                            "default": "开始时间"
                           },
                           "endTime": {
                             "type": "string",
-                            "format": "date-time"
+                            "format": "date-time",
+                            "default": "结束时间"
                           },
                           "status": {
                             "type": "integer",
-                            "format": "int32"
+                            "format": "int32",
+                            "default": "状态"
                           },
                           "categoryList": {
                             "type": "array",
@@ -258,7 +281,8 @@
                             "default": "部位"
                           },
                           "end": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "default": "是否结束"
                           }
                         },
                         "$$ref": "#/components/schemas/PlanTrainDayCourseDetail"

@@ -3,7 +3,7 @@ import os
 import json
 
 def process_files(source_folder, target_folder):
-    for i in range(3, 6):
+    for i in range(82, 84):
         folder_name = str(i)
         print("folder name: " + str(folder_name))
         source_subfolder = os.path.join(source_folder, folder_name)
